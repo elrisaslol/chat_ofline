@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,

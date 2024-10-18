@@ -1,72 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<?import java.lang.Double?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Polygon?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.chatta.controllers_and_view.PantalladeInico">>
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.chatta.controllers_and_view.PantalladeInico">
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
    </padding>
-   <children>
-      <Rectangle accessibleRole="BUTTON" fill="DODGERBLUE" height="480.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
-      <Rectangle fill="WHITE" height="44.0" layoutX="220.0" layoutY="100.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
-      <Polygon fill="DODGERBLUE" layoutX="220.0" layoutY="144.0" stroke="DODGERBLUE" strokeType="INSIDE">
-        <points>
-          <Double fx:value="-50.0" />
-          <Double fx:value="40.0" />
-          <Double fx:value="50.0" />
-          <Double fx:value="40.0" />
-          <Double fx:value="0.0" />
-          <Double fx:value="-60.0" />
-        </points>
-      </Polygon>
-      <Polygon fill="DODGERBLUE" layoutX="420.0" layoutY="144.0" stroke="DODGERBLUE" strokeType="INSIDE">
-         <points>
-            <Double fx:value="-50.0" />
-            <Double fx:value="40.0" />
-            <Double fx:value="50.0" />
-            <Double fx:value="40.0" />
-            <Double fx:value="0.0" />
-            <Double fx:value="-60.0" />
-         </points>
-      </Polygon>
-      <Polygon fill="DODGERBLUE" layoutX="320.0" layoutY="173.0" points="-58.66668701171875, -117.66666412353516, 63.33331298828125, -117.66666412353516, 0.0, -60.0" stroke="DODGERBLUE" strokeType="INSIDE" />
+   <Rectangle accessibleRole="BUTTON" fill="DODGERBLUE" height="480.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
+   <Rectangle fill="WHITE" height="44.0" layoutX="220.0" layoutY="100.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+   <Polygon fill="DODGERBLUE" layoutX="220.0" layoutY="144.0" stroke="DODGERBLUE" strokeType="INSIDE">
+      <points>
+         <Double fx:value="-50.0" />
+         <Double fx:value="40.0" />
+         <Double fx:value="50.0" />
+         <Double fx:value="40.0" />
+         <Double fx:value="0.0" />
+         <Double fx:value="-60.0" />
+      </points>
+   </Polygon>
+   <Polygon fill="DODGERBLUE" layoutX="420.0" layoutY="144.0" stroke="DODGERBLUE" strokeType="INSIDE">
+      <points>
+         <Double fx:value="-50.0" />
+         <Double fx:value="40.0" />
+         <Double fx:value="50.0" />
+         <Double fx:value="40.0" />
+         <Double fx:value="0.0" />
+         <Double fx:value="-60.0" />
+      </points>
+   </Polygon>
+   <Polygon fill="DODGERBLUE" layoutX="320.0" layoutY="173.0" points="-58.66668701171875, -117.66666412353516, 63.33331298828125, -117.66666412353516, 0.0, -60.0" stroke="DODGERBLUE" strokeType="INSIDE" />
 
-      <Text layoutX="271.0" layoutY="134.0" onMouseClicked="#switchToSecondary" strokeType="OUTSIDE" strokeWidth="0.0" text="Sin Nombre" textAlignment="CENTER">
-         <font>
-            <Font name="Times New Roman" size="20.0" />
-         </font>
-      </Text>
-      <PasswordField layoutX="244.0" layoutY="257.0" style="-fx-background-color: white;">
-         <padding>
-            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-         </padding>
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </PasswordField>
-      <TextField layoutX="244.0" layoutY="214.0" style="-fx-background-color: white;">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </TextField>
-      <Text accessibleRole="BUTTON" layoutX="282.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="registrarse" textAlignment="CENTER">
-         <font>
-            <Font name="Times New Roman Bold Italic" size="17.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Text>
-   </children>
+   <Text layoutX="271.0" layoutY="134.0" onMouseClicked="#switchToSecondary" strokeType="OUTSIDE" strokeWidth="0.0" text="Sin Nombre" textAlignment="CENTER">
+      <font>
+         <Font name="Times New Roman" size="20.0" />
+      </font>
+   </Text>
+   <PasswordField layoutX="244.0" layoutY="233.0" prefHeight="24.0" prefWidth="151.0" style="-fx-background-color: white;">
+      <padding>
+         <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </PasswordField>
+   <TextField layoutX="244.0" layoutY="188.0" prefHeight="27.0" prefWidth="151.0" style="-fx-background-color: white;">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+   </TextField>
+   <Text accessibleRole="BUTTON" layoutX="282.0" layoutY="337.0" onMouseClicked="#switchToSecondary" strokeType="OUTSIDE" strokeWidth="0.0" text="registrarse" textAlignment="CENTER">
+      <font>
+         <Font name="Times New Roman Bold Italic" size="17.0" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Text>
+   <Avatar layoutX="286.0" layoutY="19.0" radius="36.0">
+      
+         <Image url="@../assets/logotipo.jpeg" />
+
+   </Avatar>
+   <Button layoutX="293.0" layoutY="274.0" mnemonicParsing="false" onMouseClicked="#switchToSecondary2" text="iniciar" textAlignment="CENTER" />
 </Pane>

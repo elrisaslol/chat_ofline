@@ -10,4 +10,8 @@ public class PantalladeInico {
     private void switchToSecondary() throws IOException {
         App.setRoot(scenes.PANTALLADEINSCRIPCION);
     }
+    @FXML
+    private void switchToSecondary2() throws IOException {
+        App.setRoot(scenes.PANTALLADEINSCRIPCION);
+    }
 }
