@@ -7,11 +7,11 @@ import org.chatta.App;
 public class PantalladeInico {
 
     @FXML
-    private void switchToSecondary() throws IOException {
+    private void SwitchToPantalladeInscripcion() throws IOException {
         App.setRoot(scenes.PANTALLADEINSCRIPCION);
     }
     @FXML
-    private void switchToSecondary2() throws IOException {
-        App.setRoot(scenes.PANTALLADEINSCRIPCION);
+    private void SwitchToPantalladeEscribir() throws IOException {
+        App.setRoot(scenes.PANTALLADEESCRIBIR);
     }
 }

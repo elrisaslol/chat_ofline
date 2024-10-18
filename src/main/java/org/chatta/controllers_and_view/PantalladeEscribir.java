@@ -1,14 +1,14 @@
 package org.chatta.controllers_and_view;
 
-import java.io.IOException;
 import javafx.fxml.FXML;
 import org.chatta.App;
 
+import java.io.IOException;
 
-public class PantalladeInscripcion {
+public class PantalladeEscribir {
 
     @FXML
-    private void switchToPantalladeInicio() throws IOException {
+    private void SwitchTopantalladeinicio() throws IOException {
         App.setRoot(scenes.PANTALLADEINICIO);
     }
 }
