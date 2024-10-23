@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio" />
+    <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -167,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729672144835</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="principio">
+      <option name="closed" value="true" />
+      <created>1729672171165</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729672171165</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,5 +195,25 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="principio" />
     <option name="LAST_COMMIT_MESSAGE" value="principio" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
+          <line>11</line>
+          <properties class="utils.LocalTimeAdapter" method="convertLocalTimeToString">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
