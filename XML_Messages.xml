@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MessageList>
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>Hola</infoMessage>
+        <receiver>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="23/10/2024 10:41:03">
+        <infoMessage>Hola Maria</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </transmitter>
+    </Message>
+</MessageList>
