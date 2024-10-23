@@ -17,10 +17,10 @@
     <Rectangle fill="DODGERBLUE" height="480.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
 
     <Rectangle fill="WHITE" height="80.0" layoutX="143.0" layoutY="60.0" stroke="WHITE" strokeType="INSIDE" width="353.0" />
-    <Button layoutX="296.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#SwitchTopantalladeinicio" text="volver" textAlignment="CENTER" />
+    <Button layoutX="296.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#SwitchTopantalladeInicio" text="volver" textAlignment="CENTER" />
     <Ellipse fill="DODGERBLUE" layoutX="143.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
     <Ellipse fill="DODGERBLUE" layoutX="496.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
-    <Text layoutX="257.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESCRIBIR" textAlignment="CENTER">
+    <Text layoutX="257.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELEGIR" textAlignment="CENTER">
         <font>
             <Font name="Times New Roman Bold" size="26.0" />
         </font>

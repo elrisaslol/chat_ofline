@@ -88,7 +88,7 @@ public class PantalladeElegir {
                     System.out.println("Nombre seleccionado: " + rowData.getNombre()); // Para pruebas
                     try {
                         // Cambiar a la pantalla de inicio
-                        SwitchTopantalladeinicio();
+                        SwitchTopantalladeEscribir();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -99,7 +99,13 @@ public class PantalladeElegir {
     }
 
     @FXML
-    private void SwitchTopantalladeinicio() throws IOException {
+    private void SwitchTopantalladeInicio() throws IOException {
         App.setRoot(scenes.PANTALLADEINICIO);
     }
+    @FXML
+    private void SwitchTopantalladeEscribir() throws IOException {
+        App.setRoot(scenes.PANTALLADEESCRIBIR);
+    }
+
+
 }

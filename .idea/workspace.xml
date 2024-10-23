@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729238667664</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="principio">
+      <option name="closed" value="true" />
+      <created>1729671424838</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1729671424838</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

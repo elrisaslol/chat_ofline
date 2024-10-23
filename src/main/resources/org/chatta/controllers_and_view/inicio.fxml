@@ -69,5 +69,5 @@
          <Image url="@../assets/logotipo.jpeg" />
 
    </Avatar>
-   <Button layoutX="293.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#SwitchToPantalladeEscribir" text="iniciar" textAlignment="CENTER" />
+   <Button layoutX="293.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#SwitchToPantalladeElegir" text="iniciar" textAlignment="CENTER" />
 </Pane>
