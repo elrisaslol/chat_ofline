@@ -1,7 +1,8 @@
 module org.chatta {
-    requires javafx.controls;
     requires javafx.fxml;
     requires java.xml.bind;
+    requires com.gluonhq.charm.glisten;
+    requires com.gluonhq.attach.util;
 
     opens org.chatta to javafx.fxml;
     exports org.chatta;
