@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2024_11_20_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_10_2024_11_20__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/elegir.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_User.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/scenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/executable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/MessageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/MessageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LocalTimeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LocalTimeAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,36 +41,36 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="blitz" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;elrisaslol&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
+  &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/elrisaslol/chat_ofline&quot;,
     &quot;accountId&quot;: &quot;76217981-47eb-400e-aa84-7700267218b4&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="ProjectColorInfo">{
-    &quot;customColor&quot;: &quot;&quot;,
-    &quot;associatedIndex&quot;: 4
-    }</component>
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2nVu4zjiH1iOP1bCA6tMatsmrOC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -70,15 +80,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
-    "Application.EscribirMensage.executor": "Run",
-    "Application.EscribirUsuario.executor": "Run",
     "Application.executable.executor": "Run",
-    "Application.main.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging Alberto2",
+    "git-widget-placeholder": "si",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Scene builder/SceneBuilder.exe",
+    "last_opened_file_path": "D:/IntelliJ IDEA Community/IntelliJ IDEA Community project folder/chat_ofline-master",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -92,6 +99,40 @@
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta\assets" />
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.executable">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.chatta.App" />
+      <module name="chat_ofline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.chatta.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="executable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.chatta.executable" />
+      <module name="chat_ofline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.chatta.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.executable" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -242,7 +283,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
           <line>11</line>
-          <properties class="utils.LocalTimeAdapter">
+          <properties class="utils.LocalTimeAdapter" method="convertLocalTimeToString">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -252,6 +293,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
           <line>12</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
