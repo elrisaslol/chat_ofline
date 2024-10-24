@@ -20,7 +20,6 @@ public class PantalladeElegir {
         private String hora;
         private int numeroMensajes;
 
-
         public DATA(String nombre, String ultimoMensaje, String hora, int numeroMensajes) {
             this.nombre = nombre;
             this.ultimoMensaje = ultimoMensaje;
@@ -56,10 +55,9 @@ public class PantalladeElegir {
     @FXML
     private TableColumn<DATA, Integer> numeroMensajesColumn;
 
-    // Método de inicialización
     @FXML
     public void initialize() {
-        // Configurar las columnas con las propiedades del modelo
+        // Configurar las columnas
         nombreColumn.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         ultimoMensajeColumn.setCellValueFactory(new PropertyValueFactory<>("ultimoMensaje"));
         horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
@@ -69,17 +67,13 @@ public class PantalladeElegir {
         ObservableList<DATA> dataList = FXCollections.observableArrayList(
                 new DATA("Juan", "Hola", "10:30 AM", 5),
                 new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
                 new DATA("Luis", "Nos vemos", "12:45 PM", 7)
         );
 
         // Agregar los datos a la tabla
         tableView.setItems(dataList);
 
-        // Añadir un listener para detectar el clic en una fila de la tabla
+        // Añadir listener para detectar clics en filas
         tableView.setRowFactory(tv -> {
             TableRow<DATA> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -87,8 +81,8 @@ public class PantalladeElegir {
                     DATA rowData = row.getItem();
                     System.out.println("Nombre seleccionado: " + rowData.getNombre()); // Para pruebas
                     try {
-                        // Cambiar a la pantalla de inicio
-                        SwitchTopantalladeEscribir();
+                        // Cambiar a la pantalla de escribir
+                        SwitchTopantalladeEscribir(rowData.getNombre());
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -102,10 +96,15 @@ public class PantalladeElegir {
     private void SwitchTopantalladeInicio() throws IOException {
         App.setRoot(scenes.PANTALLADEINICIO);
     }
-    @FXML
-    private void SwitchTopantalladeEscribir() throws IOException {
-        App.setRoot(scenes.PANTALLADEESCRIBIR);
-    }
 
+    @FXML
+    private void SwitchTopantalladeEscribir(String nombre) throws IOException {
+        // Cambia a la escena de escribir
+        App.setRoot(scenes.PANTALLADEESCRIBIR);
+
+        // Obtener el controlador de PantalladeEscribir
+        PantalladeEscribir escribirController = (PantalladeEscribir) App.getCurrentController();
+        escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
+    }
 
 }

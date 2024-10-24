@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Application.executable.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Scene builder/SceneBuilder.exe&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Application.executable.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Scene builder/SceneBuilder.exe",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org\chatta\view" />
@@ -178,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729672171165</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="principio">
+      <option name="closed" value="true" />
+      <created>1729673564602</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729673564602</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
