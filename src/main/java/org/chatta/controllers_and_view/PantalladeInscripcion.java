@@ -51,20 +51,20 @@ public class PantalladeInscripcion {
 
             try {
                 // Cargar el archivo XML
-                File archivoXML = new File("ruta/del/archivo/usuarios.xml");  // Cambia a la ruta de tu archivo
+                File archivoXML = new File("./XML_User.xml");  // Cambia a la ruta de tu archivo
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document doc = builder.parse(archivoXML);
                 doc.getDocumentElement().normalize();
 
                 // Obtener la lista de usuarios en el archivo
-                NodeList listaUsuarios = doc.getElementsByTagName("usuario");
+                NodeList listaUsuarios = doc.getElementsByTagName("User");
 
                 // Recorrer los usuarios en el archivo
                 for (int i = 0; i < listaUsuarios.getLength(); i++) {
                     Element usuario = (Element) listaUsuarios.item(i);
 
-                    String nombre = usuario.getElementsByTagName("nombre").item(0).getTextContent();
+                    String nombre = usuario.getElementsByTagName("nickName").item(0).getTextContent();
 
 
                     // Comparar credenciales

@@ -58,7 +58,7 @@ public class PantalladeInico {
 
         try {
             // Cargar el archivo XML
-            File archivoXML = new File("ruta/del/archivo/usuarios.xml");  // Cambia a la ruta de tu archivo
+            File archivoXML = new File("./XML_User.xml");  // Cambia a la ruta de tu archivo
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(archivoXML);
