@@ -31,6 +31,7 @@ public class PantalladeInscripcion {
     private void switchToPantalladeInicio() throws IOException {
         App.setRoot(scenes.PANTALLADEINICIO);
     }
+
     @FXML
     private void SwitchToPantalladeElegir() throws IOException {
         App.setRoot(scenes.PANTALLADEELEGIR);
@@ -45,64 +46,82 @@ public class PantalladeInscripcion {
         return contraseña1.equals(contraseña2);
     }
 
-        public boolean validarNombre(TextField nombreUsuario) {
-            String usuarioIngresado = nombreUsuario.getText();
+    public boolean validarNombre(TextField nombreUsuario) {
+        String usuarioIngresado = nombreUsuario.getText();
 
 
-            try {
-                // Cargar el archivo XML
-                File archivoXML = new File("ruta/del/archivo/usuarios.xml");  // Cambia a la ruta de tu archivo
-                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder builder = factory.newDocumentBuilder();
-                Document doc = builder.parse(archivoXML);
-                doc.getDocumentElement().normalize();
+        try {
+            // Cargar el archivo XML
+            File archivoXML = new File("./XML_User.xml");  // Cambia a la ruta de tu archivo
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(archivoXML);
+            doc.getDocumentElement().normalize();
 
-                // Obtener la lista de usuarios en el archivo
-                NodeList listaUsuarios = doc.getElementsByTagName("usuario");
+            // Obtener la lista de usuarios en el archivo
+            NodeList listaUsuarios = doc.getElementsByTagName("User");
 
-                // Recorrer los usuarios en el archivo
-                for (int i = 0; i < listaUsuarios.getLength(); i++) {
-                    Element usuario = (Element) listaUsuarios.item(i);
+            // Recorrer los usuarios en el archivo
+            for (int i = 0; i < listaUsuarios.getLength(); i++) {
+                Element usuario = (Element) listaUsuarios.item(i);
 
-                    String nombre = usuario.getElementsByTagName("nombre").item(0).getTextContent();
+                String nombre = usuario.getElementsByTagName("nickName").item(0).getTextContent();
 
 
-                    // Comparar credenciales
-                    if (usuarioIngresado.equals(nombre)) {
-                        return true;  // Nombre repetido
-                    }
+                // Comparar credenciales
+                if (usuarioIngresado.equalsIgnoreCase(nombre)) {
+                    return true;  // Nombre repetido
                 }
-
-            } catch (Exception e) {
-                e.printStackTrace();
             }
-            return false;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @FXML
+    private void validarUsuario() throws IOException {
+        if (validarNombre(nombreUsuario)) {
+            System.out.println("Las nombres ya registrado.");
+            System.out.println("jaja easter egg");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error de nomenclatura");
+            alert.setHeaderText("el nombre de usuario ya se encuentra ocupado");
+            alert.setContentText("Por favor, utilize otro nombre.");
+
+            // Mostrar el popup y esperar a que el usuario lo cierre
+            alert.showAndWait();
+        } else if (!sonContraseñasIguales()) {
+            System.out.println("Las contraseñas no son iguales.");
+            System.out.println("jaja easter egg");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error de confirmación");
+            alert.setHeaderText("Confirmación de contraseña erronea");
+            alert.setContentText("Por favor, verifica tu contraseña.");
+
+            // Mostrar el popup y esperar a que el usuario lo cierre
+
+            alert.showAndWait();
+        } else if (nombreUsuario.getText() == null || nombreUsuario.getText().trim().isEmpty() || nombreUsuario.getText().trim().isBlank()) {
+            System.out.println("No hay nombre.");
+            System.out.println("jaja easter egg");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error de nomenclatura");
+            alert.setHeaderText("el nombre de usuario esta vacio o no es valido");
+            alert.setContentText("Por favor, utilize otro nombre.");
+            alert.showAndWait();
+        } else if (contraseñaUsuario.getText() == null || contraseñaUsuario.getText().trim().isEmpty() || contraseñaUsuario.getText().trim().isBlank()) {
+            System.out.println("No hay nombre.");
+            System.out.println("jaja easter egg");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error de nomenclatura");
+            alert.setHeaderText("la contraseña esta vacio o no es valido");
+            alert.setContentText("Por favor, utilize otra contraseña.");
+            alert.showAndWait();
+        } else {
+            SwitchToPantalladeElegir();
         }
 
-        @FXML
-        private void validarUsuario () throws IOException {
-            if (validarNombre(nombreUsuario)) {
-                System.out.println("Las nombres ya registrado.");
-                System.out.println("jaja easter egg");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error de nomenclatura");
-                alert.setHeaderText("el nombre de usuario ya se encuentra ocupado");
-                alert.setContentText("Por favor, utilize otro nombre.");
-
-                // Mostrar el popup y esperar a que el usuario lo cierre
-                alert.showAndWait();
-            } else if (!sonContraseñasIguales()){
-                System.out.println("Las contraseñas no son iguales.");
-                System.out.println("jaja easter egg");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error de confirmación");
-                alert.setHeaderText("Confirmación de contraseña erronea");
-                alert.setContentText("Por favor, verifica tu contraseña.");
-
-                // Mostrar el popup y esperar a que el usuario lo cierre
-                alert.showAndWait();
-            }else{
-                SwitchToPantalladeElegir();
-            }
-        }
+    }
 }
