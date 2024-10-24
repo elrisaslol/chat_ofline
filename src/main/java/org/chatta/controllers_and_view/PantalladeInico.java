@@ -1,6 +1,7 @@
 package org.chatta.controllers_and_view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import com.gluonhq.charm.glisten.control.TextField;
 import org.chatta.App;
@@ -37,7 +38,15 @@ public class PantalladeInico {
             SwitchToPantalladeElegir();
         }else{
             System.out.println("jaja easter egg");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error de autenticación");
+            alert.setHeaderText("Credenciales inválidas");
+            alert.setContentText("Por favor, verifica tu nombre de usuario y contraseña.");
+
+            // Mostrar el popup y esperar a que el usuario lo cierre
+            alert.showAndWait();
         }
+
     }
 
 
