@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio" />
+    <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +209,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729754247979</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="principio">
+      <option name="closed" value="true" />
+      <created>1729754504044</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1729754504044</updated>
+    </task>
+    <task id="LOCAL-00013" summary="principio">
+      <option name="closed" value="true" />
+      <created>1729755016419</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1729755016419</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +233,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/blitz" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -238,6 +271,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
           <line>12</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
