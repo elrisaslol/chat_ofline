@@ -45,6 +45,7 @@ public class PantalladeInico {
 
             // Mostrar el popup y esperar a que el usuario lo cierre
             alert.showAndWait();
+            //SwitchToPantalladeElegir();
         }
 
     }
