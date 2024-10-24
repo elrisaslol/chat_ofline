@@ -15,6 +15,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Object currentController; // Variable para almacenar el controlador actual
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -24,16 +25,25 @@ public class App extends Application {
     }
 
     public static void setRoot(scenes url) throws IOException {
-        scene.setRoot(loadFXML(url));
+        Parent root = loadFXML(url);
+        scene.setRoot(root);
     }
 
+    // Método para cargar el FXML y almacenar el controlador
     private static Parent loadFXML(scenes url) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(url.getURL()));
-        return fxmlLoader.load();
+        Parent parent = fxmlLoader.load(); // Carga el FXML
+        currentController = fxmlLoader.getController(); // Guarda el controlador
+        return parent;
+    }
+
+    // Método para obtener el controlador actual
+    public static Object getCurrentController() {
+        return currentController; // Retorna el controlador almacenado
     }
 
     public static void begin() {
         launch();
     }
-
 }
+
