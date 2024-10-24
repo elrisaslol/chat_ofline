@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
-      <change afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/MessageList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/UserList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LocalTimeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Alberto" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -47,11 +49,12 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "Application.EscribirMensage.executor": "Run",
+    "Application.EscribirUsuario.executor": "Run",
     "Application.executable.executor": "Run",
     "Application.main.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Alberto",
+    "git-widget-placeholder": "Alberto2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Scene builder/SceneBuilder.exe",
     "project.structure.last.edited": "Project",
@@ -126,7 +129,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -135,5 +150,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="principio" />
     <option name="LAST_COMMIT_MESSAGE" value="principio" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirUsuario.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

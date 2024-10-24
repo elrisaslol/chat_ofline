@@ -34,11 +34,11 @@ public class XML_Message {
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 
             // Crear un contenedor para todos los mensajes
-            MessageList wrapper = new MessageList();
-            wrapper.setMessages(messages);
+            MessageList list = new MessageList();
+            list.setMessages(messages);
 
             // Escribir todos los mensajes en el archivo
-            marshaller.marshal(wrapper, file);
+            marshaller.marshal(list, file);
             result = true;
 
         } catch (JAXBException e) {
@@ -51,8 +51,8 @@ public class XML_Message {
         try {
             JAXBContext context = JAXBContext.newInstance(MessageList.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            MessageList wrapper = (MessageList) unmarshaller.unmarshal(file);
-            return wrapper.getMessages();
+            MessageList list = (MessageList) unmarshaller.unmarshal(file);
+            return list.getMessages();
         } catch (JAXBException e) {
             e.printStackTrace();
             return new ArrayList<>();

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UserList>
+    <User>
+        <nickName>Juan</nickName>
+        <password>pass1</password>
+    </User>
+    <User>
+        <nickName>Maria</nickName>
+        <password>pass2</password>
+    </User>
+    <User>
+        <nickName>salva</nickName>
+        <password>12334</password>
+    </User>
+</UserList>

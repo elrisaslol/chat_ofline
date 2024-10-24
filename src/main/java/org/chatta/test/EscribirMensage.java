@@ -8,7 +8,7 @@ import org.chatta.model.entity.User;
 public class EscribirMensage {
     public static void main(String[] args) {
         MessageList messageList = new MessageList();
-        Message message = new Message(new User("Juan", "pass1"), new User("Maria", "pass2"), "Hola Maria");
+        Message message = new Message(new User("Jua2n", "pass1"), new User("Maria", "pass2"), "Hola Maria");
 
         // Escribir un mensaje en el archivo XML
         boolean success = XML_Message.writeXML(message, "XML_Messages.xml");
