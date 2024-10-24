@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inscripcion.fxml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +21,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+
+
         <entry key="$PROJECT_DIR$" value="master" />
+
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,10 +63,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.EscribirMensage.executor": "Run",
+    "Application.EscribirUsuario.executor": "Run",
     "Application.executable.executor": "Run",
+    "Application.main.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+
+
+
     "git-widget-placeholder": "blitz",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Scene builder/SceneBuilder.exe",
     "project.structure.last.edited": "Project",
@@ -77,40 +89,6 @@
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta\assets" />
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.executable">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.chatta.App" />
-      <module name="chat_ofline" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.chatta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="executable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.chatta.executable" />
-      <module name="chat_ofline" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.chatta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.executable" />
-        <item itemvalue="Application.App" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -239,7 +217,11 @@
                   <entry key="branch">
                     <value>
                       <list>
+
+                 
+
                         <option value="origin/blitz" />
+
                       </list>
                     </value>
                   </entry>
@@ -258,6 +240,7 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
           <line>11</line>
@@ -277,6 +260,7 @@
           <line>40</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+
       </breakpoints>
     </breakpoint-manager>
   </component>

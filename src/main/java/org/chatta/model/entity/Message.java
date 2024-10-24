@@ -2,6 +2,8 @@ package org.chatta.model.entity;
 
 import org.chatta.model.entity.User;
 import utils.LocalTimeAdapter;  // Ajuste para la ruta correcta
+
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import javax.xml.bind.annotation.XmlAttribute;
@@ -19,7 +21,7 @@ public class Message {
         this.transmitter = transmitter;
         this.receiver = receiver;
         this.infoMessage = infoMessage;
-        this.dateMessage = LocalTimeAdapter.convertLocalTimeToString(LocalTime.now());
+        this.dateMessage = LocalTimeAdapter.convertLocalTimeToString(LocalDateTime.from(LocalDateTime.now()));
     }
 
     public Message(User transmitter) {
@@ -51,7 +53,7 @@ public class Message {
     }
 
     public void setDateMessage(LocalTime dateMessage) {
-        this.dateMessage = LocalTimeAdapter.convertLocalTimeToString(LocalTime.now());
+        this.dateMessage = LocalTimeAdapter.convertLocalTimeToString(LocalDateTime.from(dateMessage));
     }
 
     public String getInfoMessage() {
@@ -64,8 +66,8 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message de " + transmitter.getNickName() + " fecha: " + LocalTimeAdapter.convertStringToLocalTime(dateMessage) +"  \n" +
-                "Remitente: " + receiver.getNickName() + " { \n"+
+        return "Message de " + transmitter.getNickName() + " fecha: " + LocalTimeAdapter.convertStringToLocalTime(dateMessage) + "  \n" +
+                "Remitente: " + receiver.getNickName() + " { \n" +
                 infoMessage + " \n}";
     }
 }
