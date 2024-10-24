@@ -15,11 +15,11 @@
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
    </padding>
       <Rectangle fill="DODGERBLUE" height="480.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
-      <TextField layoutX="246.0" layoutY="195.0" />
-      <PasswordField layoutX="246.0" layoutY="245.0" />
-      <PasswordField layoutX="246.0" layoutY="296.0" />
+      <TextField fx:id="nombreUsuario" layoutX="246.0" layoutY="195.0" />
+      <PasswordField fx:id="contraseñaUsuario" layoutX="246.0" layoutY="245.0" />
+      <PasswordField fx:id="confirmarContraseña" layoutX="246.0" layoutY="296.0" />
       <Rectangle fill="WHITE" height="80.0" layoutX="143.0" layoutY="60.0" stroke="WHITE" strokeType="INSIDE" width="353.0" />
-      <Button layoutX="284.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#switchToPantalladeInicio" text="registrame" textAlignment="CENTER" />
+      <Button layoutX="284.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#validarUsuario" text="registrame" textAlignment="CENTER" />
       <Ellipse fill="DODGERBLUE" layoutX="143.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
       <Ellipse fill="DODGERBLUE" layoutX="496.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
       <Text layoutX="252.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO" textAlignment="CENTER">
