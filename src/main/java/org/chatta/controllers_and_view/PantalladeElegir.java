@@ -107,4 +107,6 @@ public class PantalladeElegir {
         escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
     }
 
+
+
 }
