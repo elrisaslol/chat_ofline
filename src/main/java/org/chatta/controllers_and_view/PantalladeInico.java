@@ -18,6 +18,10 @@ import java.io.IOException;
 
 public class PantalladeInico {
 
+    public void initialize() {
+        //mostrar singleton
+        System.out.println(Sesion.getSesion().getUser());}
+
     @FXML
     private TextField nombreUsuario;
 

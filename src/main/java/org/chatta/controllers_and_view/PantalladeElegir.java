@@ -9,6 +9,9 @@ import org.chatta.App;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import org.chatta.model.connection.XML_Message;
+import org.chatta.model.entity.Message;
+import org.chatta.model.entity.Sesion;
 import org.chatta.model.entity.User;
 
 import java.io.File;
@@ -16,6 +19,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.chatta.model.connection.XML_Message.readMessagesFromFile;
 import static org.chatta.model.connection.XML_User.readUserFromFile;
 
 public class PantalladeElegir {
@@ -83,22 +87,33 @@ public class PantalladeElegir {
 
     @FXML
     public void initialize() {
+        //mostrar singleton
+        System.out.println(Sesion.getSesion().getUser());
+
+
         // Configurar las columnas
         nombreColumn.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         ultimoMensajeColumn.setCellValueFactory(new PropertyValueFactory<>("ultimoMensaje"));
         horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
         numeroMensajesColumn.setCellValueFactory(new PropertyValueFactory<>("numeroMensajes"));
 
-        // Crear lista de datos
+       /* // Información de los datos de abajo
         List<String> nicknames = mostrarTodosLosUsuarios();
+        List<Message> messages = readMessagesFromFile(new File(XML.MESSAGE_XML.getURL()));
+
+
+        // Crear lista de datos
         for (String nickname : nicknames) {
-            ObservableList<DATA> dataList = FXCollections.observableArrayList(
+            if (Sesion.getSesion().getUser().getNickName() != nickname) {       //Si el que se encuentra en sesion no se muestra
+                ObservableList<DATA> dataList = FXCollections.observableArrayList(
 
-                    new DATA(nickname, nickname, "10:30 AM", 5)
+                        new DATA(nickname, "Ultimo mensaje", "10:30 AM", 5)
 
-            );
-            tableView.setItems(dataList);
+                );
+                tableView.setItems(dataList);
+            }
         }
+
         // Agregar los datos a la tabla
 
 
@@ -118,7 +133,7 @@ public class PantalladeElegir {
                 }
             });
             return row;
-        });
+        });*/
     }
 
     @FXML
