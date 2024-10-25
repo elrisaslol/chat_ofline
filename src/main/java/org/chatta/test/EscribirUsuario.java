@@ -1,12 +1,13 @@
 package org.chatta.test;
 
+import org.chatta.controllers_and_view.XML;
 import org.chatta.model.connection.XML_User;
 import org.chatta.model.entity.User;
 
 public class EscribirUsuario {
     public static void main(String[] args) {
         User user = new User("salva", "12334");
-        boolean success = XML_User.writeXML(user, "XML_User.xml");
+        boolean success = XML_User.writeXML(user, XML.USER_XML.getURL());
         if (success) {
             System.out.println("Mensaje escrito correctamente.");
         } else {
@@ -14,7 +15,7 @@ public class EscribirUsuario {
         }
 
         // Leer los mensajes del archivo XML
-        User readUser = XML_User.readXML("XML_User.xml");
+        User readUser = XML_User.readXML(XML.USER_XML.getURL());
         if (readUser != null) {
             System.out.println("Último mensaje leído: " + readUser);
         } else {

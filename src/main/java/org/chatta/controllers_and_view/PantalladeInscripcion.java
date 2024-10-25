@@ -54,7 +54,7 @@ public class PantalladeInscripcion {
 
         try {
             // Cargar el archivo XML
-            File archivoXML = new File("./XML_User.xml");  // Cambia a la ruta de tu archivo
+            File archivoXML = new File(XML.USER_XML.getURL());  // Cambia a la ruta de tu archivo
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(archivoXML);
@@ -132,7 +132,7 @@ public class PantalladeInscripcion {
     public void registrar(){
         User user;
         user = new User(nombreUsuario.getText(), contraseñaUsuario.getText());
-        boolean almacenado = XML_User.writeXML(user, "XML_User.xml");
+        boolean almacenado = XML_User.writeXML(user, XML.USER_XML.getURL());
         if (almacenado) {
             System.out.println("almacena");
         }else {

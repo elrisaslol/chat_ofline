@@ -9,7 +9,13 @@ public enum scenes {
 
 
     private String url;
-    scenes(String url){this.url=url;}
-    public String getURL(){return url;}
+
+    scenes(String url) {
+        this.url = url;
+    }
+
+    public String getURL() {
+        return url;
+    }
 
 }

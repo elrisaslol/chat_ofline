@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/entity/Sesion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/XML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/MostrarTodosLosNicknames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/scenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -74,40 +79,6 @@
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta\assets" />
       <recent name="D:\IntelliJ IDEA Community\IntelliJ IDEA Community project folder\chat ofline\src\main\resources\org.chatta" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.executable">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.chatta.App" />
-      <module name="chat_ofline" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.chatta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="executable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.chatta.executable" />
-      <module name="chat_ofline" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.chatta.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.executable" />
-        <item itemvalue="Application.App" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

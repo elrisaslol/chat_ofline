@@ -46,7 +46,7 @@ public class XML_User {
         return result;
     }
 
-    private static List<User> readUserFromFile(File file) {
+    public static List<User> readUserFromFile(File file) {
         try {
             JAXBContext context = JAXBContext.newInstance(UserList.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
