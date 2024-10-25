@@ -33,4 +33,26 @@
             <password>pass1</password>
         </transmitter>
     </Message>
+    <Message dateMessage="24/10/2024 10:24:45">
+        <infoMessage>funciona hijoputa</infoMessage>
+        <receiver>
+            <nickName>1</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>2</nickName>
+            <password>pass1</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 10:24:45">
+        <infoMessage>Hola Maria</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Jua2n</nickName>
+            <password>pass1</password>
+        </transmitter>
+    </Message>
 </MessageList>
