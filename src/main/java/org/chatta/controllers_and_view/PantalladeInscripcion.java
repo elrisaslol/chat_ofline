@@ -129,7 +129,7 @@ public class PantalladeInscripcion {
 
     }
 
-    public boolean registrar(){
+    public void registrar(){
         User user;
         user = new User(nombreUsuario.getText(), contraseñaUsuario.getText());
         boolean almacenado = XML_User.writeXML(user, "XML_User.xml");
@@ -143,6 +143,5 @@ public class PantalladeInscripcion {
             alert.setContentText("Error al almacenar");
             alert.showAndWait();
         }
-        return almacenado;
     }
 }
