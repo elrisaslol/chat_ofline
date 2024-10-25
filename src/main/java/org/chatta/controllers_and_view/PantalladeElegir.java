@@ -9,8 +9,18 @@ import org.chatta.App;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import org.chatta.model.connection.XML_Message;
+import org.chatta.model.entity.Message;
+import org.chatta.model.entity.Sesion;
+import org.chatta.model.entity.User;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.chatta.model.connection.XML_Message.readMessagesFromFile;
+import static org.chatta.model.connection.XML_User.readUserFromFile;
 
 public class PantalladeElegir {
 
@@ -27,17 +37,37 @@ public class PantalladeElegir {
             this.numeroMensajes = numeroMensajes;
         }
 
-        public String getNombre() { return nombre; }
-        public void setNombre(String nombre) { this.nombre = nombre; }
+        public String getNombre() {
+            return nombre;
+        }
 
-        public String getUltimoMensaje() { return ultimoMensaje; }
-        public void setUltimoMensaje(String ultimoMensaje) { this.ultimoMensaje = ultimoMensaje; }
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
 
-        public String getHora() { return hora; }
-        public void setHora(String hora) { this.hora = hora; }
+        public String getUltimoMensaje() {
+            return ultimoMensaje;
+        }
 
-        public int getNumeroMensajes() { return numeroMensajes; }
-        public void setNumeroMensajes(int numeroMensajes) { this.numeroMensajes = numeroMensajes; }
+        public void setUltimoMensaje(String ultimoMensaje) {
+            this.ultimoMensaje = ultimoMensaje;
+        }
+
+        public String getHora() {
+            return hora;
+        }
+
+        public void setHora(String hora) {
+            this.hora = hora;
+        }
+
+        public int getNumeroMensajes() {
+            return numeroMensajes;
+        }
+
+        public void setNumeroMensajes(int numeroMensajes) {
+            this.numeroMensajes = numeroMensajes;
+        }
     }
 
     @FXML
@@ -57,21 +87,35 @@ public class PantalladeElegir {
 
     @FXML
     public void initialize() {
+        //mostrar singleton
+        System.out.println(Sesion.getSesion().getUser());
+
+
         // Configurar las columnas
         nombreColumn.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         ultimoMensajeColumn.setCellValueFactory(new PropertyValueFactory<>("ultimoMensaje"));
         horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
         numeroMensajesColumn.setCellValueFactory(new PropertyValueFactory<>("numeroMensajes"));
 
+       /* // Información de los datos de abajo
+        List<String> nicknames = mostrarTodosLosUsuarios();
+        List<Message> messages = readMessagesFromFile(new File(XML.MESSAGE_XML.getURL()));
+
+
         // Crear lista de datos
-        ObservableList<DATA> dataList = FXCollections.observableArrayList(
-                new DATA("Juan", "Hola", "10:30 AM", 5),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("Luis", "Nos vemos", "12:45 PM", 7)
-        );
+        for (String nickname : nicknames) {
+            if (Sesion.getSesion().getUser().getNickName() != nickname) {       //Si el que se encuentra en sesion no se muestra
+                ObservableList<DATA> dataList = FXCollections.observableArrayList(
+
+                        new DATA(nickname, "Ultimo mensaje", "10:30 AM", 5)
+
+                );
+                tableView.setItems(dataList);
+            }
+        }
 
         // Agregar los datos a la tabla
-        tableView.setItems(dataList);
+
 
         // Añadir listener para detectar clics en filas
         tableView.setRowFactory(tv -> {
@@ -89,7 +133,7 @@ public class PantalladeElegir {
                 }
             });
             return row;
-        });
+        });*/
     }
 
     @FXML
@@ -107,6 +151,16 @@ public class PantalladeElegir {
         escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
     }
 
+    public static List<String> mostrarTodosLosUsuarios() {
 
+        List<User> users = readUserFromFile(new File(XML.USER_XML.getURL()));
+        ArrayList<String> nickNames = new ArrayList<>();
+
+        for (User user : users) {
+            nickNames.add(user.getNickName());
+        }
+
+        return nickNames;
+    }
 
 }

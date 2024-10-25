@@ -20,4 +20,40 @@
         <nickName>pepa</nickName>
         <password>1</password>
     </User>
+    <User>
+        <nickName>Alberto</nickName>
+        <password>alberto</password>
+    </User>
+    <User>
+        <nickName>Alberto2</nickName>
+        <password>alberto2</password>
+    </User>
+    <User>
+        <nickName>Alberto3</nickName>
+        <password>alberto2</password>
+    </User>
+    <User>
+        <nickName>7</nickName>
+        <password>7</password>
+    </User>
+    <User>
+        <nickName>1</nickName>
+        <password>1</password>
+    </User>
+    <User>
+        <nickName>2</nickName>
+        <password>2</password>
+    </User>
+    <User>
+        <nickName>Pedrioto</nickName>
+        <password>pe</password>
+    </User>
+    <User>
+        <nickName>Ra</nickName>
+        <password>ra</password>
+    </User>
+    <User>
+        <nickName>come</nickName>
+        <password>pito</password>
+    </User>
 </UserList>

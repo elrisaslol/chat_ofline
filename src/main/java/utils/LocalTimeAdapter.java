@@ -19,5 +19,7 @@ public class LocalTimeAdapter {
         return LocalDateTime.parse(timeString, formatter);
     }
 
+
+
 }
 

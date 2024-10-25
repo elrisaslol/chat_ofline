@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.chatta.App;
 import org.chatta.model.connection.XML_User;
+import org.chatta.model.entity.Sesion;
 import org.chatta.model.entity.User;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -20,6 +21,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 
 public class PantalladeInscripcion {
+    public void initialize() {
+        //mostrar singleton
+        System.out.println(Sesion.getSesion().getUser());
+    }
     @FXML
     private PasswordField contraseñaUsuario;
 
@@ -33,6 +38,8 @@ public class PantalladeInscripcion {
     private void switchToPantalladeInicio() throws IOException {
         App.setRoot(scenes.PANTALLADEINICIO);
     }
+
+
 
     @FXML
     private void SwitchToPantalladeElegir() throws IOException {
@@ -48,13 +55,15 @@ public class PantalladeInscripcion {
         return contraseña1.equals(contraseña2);
     }
 
+
+
     public boolean validarNombre(TextField nombreUsuario) {
         String usuarioIngresado = nombreUsuario.getText();
 
 
         try {
             // Cargar el archivo XML
-            File archivoXML = new File("./XML_User.xml");  // Cambia a la ruta de tu archivo
+            File archivoXML = new File(XML.USER_XML.getURL());  // Cambia a la ruta de tu archivo
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(archivoXML);
@@ -132,9 +141,10 @@ public class PantalladeInscripcion {
     public void registrar(){
         User user;
         user = new User(nombreUsuario.getText(), contraseñaUsuario.getText());
-        boolean almacenado = XML_User.writeXML(user, "XML_User.xml");
+        Sesion.getSesion().setUser(new User(nombreUsuario.getText(), contraseñaUsuario.getText()));
+        boolean almacenado = XML_User.writeXML(user, XML.USER_XML.getURL());
         if (almacenado) {
-            System.out.println("almacena");
+            System.out.println(Sesion.getSesion().getUser().getNickName());
         }else {
             System.out.println("Error al almacenar");
             Alert alert = new Alert(Alert.AlertType.ERROR);

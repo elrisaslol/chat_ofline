@@ -5,6 +5,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 import org.chatta.App;
+import org.chatta.model.entity.Sesion;
 
 public class PantalladeEscribir {
 
@@ -28,6 +29,10 @@ public class PantalladeEscribir {
 
     @FXML
     public void initialize() {
+            //mostrar singleton
+            System.out.println(Sesion.getSesion().getUser());
+
+
         // Inicializaciones adicionales si son necesarias
         // Por ejemplo, puedes limpiar el TextArea de nombre de usuario al inicio
         nombreusuario.setText("Usuario desconocido");

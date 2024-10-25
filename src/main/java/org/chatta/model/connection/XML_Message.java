@@ -47,7 +47,7 @@ public class XML_Message {
         return result;
     }
 
-    private static List<Message> readMessagesFromFile(File file) {
+    public static List<Message> readMessagesFromFile(File file) {
         try {
             JAXBContext context = JAXBContext.newInstance(MessageList.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
