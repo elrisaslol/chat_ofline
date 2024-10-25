@@ -5,6 +5,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import com.gluonhq.charm.glisten.control.TextField;
 import org.chatta.App;
+import org.chatta.model.entity.Sesion;
+import org.chatta.model.entity.User;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -35,6 +37,7 @@ public class PantalladeInico {
     @FXML
     private void InicioSesión() throws IOException{
         if (validarCredenciales(nombreUsuario,contraseñaUsuario)){
+            Sesion.getSesion().setUser(new User(nombreUsuario.getText(), contraseñaUsuario.getText()));
             SwitchToPantalladeElegir();
         }else{
             System.out.println("jaja easter egg");
