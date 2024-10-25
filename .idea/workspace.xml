@@ -16,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -271,7 +271,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
