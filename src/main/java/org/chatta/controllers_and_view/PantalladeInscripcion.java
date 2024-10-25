@@ -9,6 +9,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import org.chatta.App;
+import org.chatta.model.connection.XML_User;
+import org.chatta.model.entity.User;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -123,5 +125,17 @@ public class PantalladeInscripcion {
             SwitchToPantalladeElegir();
         }
 
+    }
+
+    public boolean registrar(){
+        User user;
+        user = new User(nombreUsuario.getText(), contraseñaUsuario.getText());
+        boolean almacenado = XML_User.writeXML(user, "XML_User.xml");
+        if (almacenado) {
+            System.out.println("almacena");
+        }else {
+            System.out.println("Error al almacenar");
+        }
+        return almacenado;
     }
 }
