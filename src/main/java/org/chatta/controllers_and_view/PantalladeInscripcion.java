@@ -87,7 +87,7 @@ public class PantalladeInscripcion {
         if (validarNombre(nombreUsuario)) {
             System.out.println("Las nombres ya registrado.");
             System.out.println("jaja easter egg");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error de nomenclatura");
             alert.setHeaderText("el nombre de usuario ya se encuentra ocupado");
             alert.setContentText("Por favor, utilize otro nombre.");
@@ -97,7 +97,7 @@ public class PantalladeInscripcion {
         } else if (!sonContraseñasIguales()) {
             System.out.println("Las contraseñas no son iguales.");
             System.out.println("jaja easter egg");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error de confirmación");
             alert.setHeaderText("Confirmación de contraseña erronea");
             alert.setContentText("Por favor, verifica tu contraseña.");
@@ -108,7 +108,7 @@ public class PantalladeInscripcion {
         } else if (nombreUsuario.getText() == null || nombreUsuario.getText().trim().isEmpty() || nombreUsuario.getText().trim().isBlank()) {
             System.out.println("No hay nombre.");
             System.out.println("jaja easter egg");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error de nomenclatura");
             alert.setHeaderText("el nombre de usuario esta vacio o no es valido");
             alert.setContentText("Por favor, utilize otro nombre.");
@@ -116,13 +116,15 @@ public class PantalladeInscripcion {
         } else if (contraseñaUsuario.getText() == null || contraseñaUsuario.getText().trim().isEmpty() || contraseñaUsuario.getText().trim().isBlank()) {
             System.out.println("No hay nombre.");
             System.out.println("jaja easter egg");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Error de nomenclatura");
             alert.setHeaderText("la contraseña esta vacio o no es valido");
             alert.setContentText("Por favor, utilize otra contraseña.");
             alert.showAndWait();
         } else {
+            registrar();
             SwitchToPantalladeElegir();
+
         }
 
     }
@@ -135,6 +137,11 @@ public class PantalladeInscripcion {
             System.out.println("almacena");
         }else {
             System.out.println("Error al almacenar");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error al almacenar");
+            alert.setHeaderText("Error al almacenar");
+            alert.setContentText("Error al almacenar");
+            alert.showAndWait();
         }
         return almacenado;
     }

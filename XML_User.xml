@@ -12,4 +12,8 @@
         <nickName>salva</nickName>
         <password>12334</password>
     </User>
+    <User>
+        <nickName>pepito</nickName>
+        <password>1234</password>
+    </User>
 </UserList>
