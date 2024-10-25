@@ -97,20 +97,22 @@ public class PantalladeElegir {
         horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
         numeroMensajesColumn.setCellValueFactory(new PropertyValueFactory<>("numeroMensajes"));
 
-       /* // Información de los datos de abajo
-        List<String> nicknames = mostrarTodosLosUsuarios();
+       // Información de los datos de abajo
+        List<User> users =readUserFromFile(new File(XML.USER_XML.getURL()));
         List<Message> messages = readMessagesFromFile(new File(XML.MESSAGE_XML.getURL()));
 
 
         // Crear lista de datos
-        for (String nickname : nicknames) {
-            if (Sesion.getSesion().getUser().getNickName() != nickname) {       //Si el que se encuentra en sesion no se muestra
-                ObservableList<DATA> dataList = FXCollections.observableArrayList(
+        for (User user : users) {
+            if (Sesion.getSesion().getUser() != user) {       //Si el que se encuentra en sesion no se muestra
+                if (UltimoMensaje(user)) {
+                    ObservableList<DATA> dataList = FXCollections.observableArrayList(
 
-                        new DATA(nickname, "Ultimo mensaje", "10:30 AM", 5)
+                            new DATA(user.getNickName(), "Ultimo mensaje", "10:30 AM", 5)
 
-                );
+                                );
                 tableView.setItems(dataList);
+                }
             }
         }
 
@@ -133,7 +135,7 @@ public class PantalladeElegir {
                 }
             });
             return row;
-        });*/
+        });
     }
 
     @FXML
@@ -151,16 +153,9 @@ public class PantalladeElegir {
         escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
     }
 
-    public static List<String> mostrarTodosLosUsuarios() {
+    public static boolean UltimoMensaje(User user){
 
-        List<User> users = readUserFromFile(new File(XML.USER_XML.getURL()));
-        ArrayList<String> nickNames = new ArrayList<>();
 
-        for (User user : users) {
-            nickNames.add(user.getNickName());
-        }
-
-        return nickNames;
     }
 
 }
