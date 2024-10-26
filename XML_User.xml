@@ -56,4 +56,12 @@
         <nickName>come</nickName>
         <password>pito</password>
     </User>
+    <User>
+        <nickName>ppp</nickName>
+        <password>ppp</password>
+    </User>
+    <User>
+        <nickName>123</nickName>
+        <password>123</password>
+    </User>
 </UserList>

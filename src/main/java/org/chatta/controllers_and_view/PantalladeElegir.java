@@ -13,9 +13,11 @@ import org.chatta.model.connection.XML_Message;
 import org.chatta.model.entity.Message;
 import org.chatta.model.entity.Sesion;
 import org.chatta.model.entity.User;
+import utils.LocalTimeAdapter;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -97,24 +99,40 @@ public class PantalladeElegir {
         horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
         numeroMensajesColumn.setCellValueFactory(new PropertyValueFactory<>("numeroMensajes"));
 
-       // Información de los datos de abajo
-        List<User> users =readUserFromFile(new File(XML.USER_XML.getURL()));
+        // Información de los datos de abajo
+        List<User> users = readUserFromFile(new File(XML.USER_XML.getURL()));
         List<Message> messages = readMessagesFromFile(new File(XML.MESSAGE_XML.getURL()));
 
 
         // Crear lista de datos
+        ObservableList<DATA> dataList = FXCollections.observableArrayList();
+
         for (User user : users) {
-            if (Sesion.getSesion().getUser() != user) {       //Si el que se encuentra en sesion no se muestra
-                if (UltimoMensaje(user)) {
-                    ObservableList<DATA> dataList = FXCollections.observableArrayList(
-
-                            new DATA(user.getNickName(), "Ultimo mensaje", "10:30 AM", 5)
-
-                                );
-                tableView.setItems(dataList);
+            Message ultimoMessage = UltimoMensaje(user);
+            if (Sesion.getSesion().getUser() != user) { // Verificar que el usuario en sesión no se muestre
+                if (ultimoMessage != null) {
+                    // Agregar datos con el último mensaje encontrado
+                    dataList.add(new DATA(
+                            user.getNickName(),
+                            ultimoMessage.getInfoMessage(),
+                            ultimoMessage.getDateMessage(),
+                            5
+                    ));
+                } else {
+                    // Agregar datos con un mensaje vacío si no hay último mensaje
+                    dataList.add(new DATA(
+                            user.getNickName(),
+                            "",
+                            "",
+                            5
+                    ));
                 }
             }
         }
+
+        // Establecer la lista completa en el TableView
+        tableView.setItems(dataList);
+
 
         // Agregar los datos a la tabla
 
@@ -153,9 +171,40 @@ public class PantalladeElegir {
         escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
     }
 
-    public static boolean UltimoMensaje(User user){
+    public static Message UltimoMensaje(User user) {
+        List<Message> messages = XML_Message.readMessagesFromFile(new File((XML.MESSAGE_XML.getURL())));
+        List<Message> messagesTMP = new ArrayList<>();
+
+        for (Message message : messages) {
+            if (message.getTransmitter() == user && message.getReceiver() == Sesion.getSesion().getUser()
+                    || message.getTransmitter() == Sesion.getSesion().getUser() && message.getReceiver() == user) {
+                messagesTMP.add(message);
+            }
+        }
+
+        Message ultimoMensaje = encontrarMensajeMasCercano(messagesTMP);
+
+        return ultimoMensaje;
+    }
 
 
+    public static Message encontrarMensajeMasCercano(List<Message> messages) {
+        LocalDateTime ahora = LocalDateTime.now();
+        Message mensajeMasCercano = null;
+
+        for (Message message : messages) {
+            LocalDateTime fecha = LocalTimeAdapter.convertStringToLocalTime(message.getDateMessage()); // Obtener la fecha del mensaje
+
+            if (mensajeMasCercano == null ||
+                    Math.abs(fecha.until(ahora, java.time.temporal.ChronoUnit.SECONDS)) <
+                            Math.abs(LocalTimeAdapter.convertStringToLocalTime(mensajeMasCercano.getDateMessage())
+                                    .until(ahora, java.time.temporal.ChronoUnit.SECONDS))) {
+
+                mensajeMasCercano = message;
+            }
+        }
+
+        return mensajeMasCercano;
     }
 
 }
