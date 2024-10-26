@@ -108,6 +108,7 @@ public class PantalladeElegir {
         ObservableList<DATA> dataList = FXCollections.observableArrayList();
 
         for (User user : users) {
+            int numeroDeMensajes = contarMensajes(user);
             Message ultimoMessage = UltimoMensaje(user);
             if (Sesion.getSesion().getUser() != user) { // Verificar que el usuario en sesión no se muestre
                 if (ultimoMessage != null) {
@@ -116,7 +117,7 @@ public class PantalladeElegir {
                             user.getNickName(),
                             ultimoMessage.getInfoMessage(),
                             ultimoMessage.getDateMessage(),
-                            5
+                            numeroDeMensajes
                     ));
                 } else {
                     // Agregar datos con un mensaje vacío si no hay último mensaje
@@ -124,7 +125,7 @@ public class PantalladeElegir {
                             user.getNickName(),
                             "",
                             "",
-                            5
+                            numeroDeMensajes
                     ));
                 }
             }
@@ -176,8 +177,8 @@ public class PantalladeElegir {
         List<Message> messagesTMP = new ArrayList<>();
 
         for (Message message : messages) {
-            if (message.getTransmitter() == user && message.getReceiver() == Sesion.getSesion().getUser()
-                    || message.getTransmitter() == Sesion.getSesion().getUser() && message.getReceiver() == user) {
+            if ((message.getTransmitter().equals(user) && message.getReceiver().equals(Sesion.getSesion().getUser())) ||
+                    (message.getTransmitter().equals(Sesion.getSesion().getUser()) && message.getReceiver().equals(user))) {
                 messagesTMP.add(message);
             }
         }
@@ -205,6 +206,21 @@ public class PantalladeElegir {
         }
 
         return mensajeMasCercano;
+    }
+
+    public static int contarMensajes(User user){
+        int contador = 0;
+
+        List<Message> messages = XML_Message.readMessagesFromFile(new File((XML.MESSAGE_XML.getURL())));
+
+        for (Message message : messages) {
+            if ((message.getTransmitter().equals(user) && message.getReceiver().equals(Sesion.getSesion().getUser())) ||
+                    (message.getTransmitter().equals(Sesion.getSesion().getUser()) && message.getReceiver().equals(user))) {
+                contador++;
+            }
+        }
+
+        return contador;
     }
 
 }
