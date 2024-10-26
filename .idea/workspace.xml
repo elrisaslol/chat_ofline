@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/encontrarMensajeMasCerca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,8 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "Application.MostrarTodosLosNicknames.executor": "Run",
-    "Application.executable.executor": "Run",
+    "Application.encontrarMensajeMasCerca.executor": "Run",
+    "Application.executable.executor": "Debug",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Alberto2",
@@ -232,15 +234,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java</url>
-          <line>210</line>
-          <properties class="org.chatta.controllers_and_view.PantalladeElegir" method="contarMensajes">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>
           <line>12</line>
@@ -250,6 +243,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java</url>
           <line>47</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

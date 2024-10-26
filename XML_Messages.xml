@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MessageList>
-    <Message dateMessage="23/10/2024 10:35:10">
-        <infoMessage>Hola</infoMessage>
+    <!-- Conversación entre María y Salva -->
+    <Message dateMessage="24/10/2024 09:00:00">
+        <infoMessage>¡Hola María! ¿Cómo estás?</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 09:01:00">
+        <infoMessage>¡Hola Salva! Bien, ¿y tú?</infoMessage>
         <receiver>
             <nickName>Salva</nickName>
             <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 09:02:30">
+        <infoMessage>Todo bien. Oye, ¿viste la última serie de la que te hablé?</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 09:03:15">
+        <infoMessage>¡Sí! La empecé anoche. Está muy interesante.</infoMessage>
+        <receiver>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 09:04:10">
+        <infoMessage>Genial, luego me cuentas qué te parece el final. ¡No te lo esperas!</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación entre María y Alberto -->
+    <Message dateMessage="24/10/2024 10:10:00">
+        <infoMessage>¡Buenos días, María!</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
         </receiver>
         <transmitter>
             <nickName>Alberto</nickName>
             <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="23/10/2024 10:41:03">
-        <infoMessage>Hola Maria</infoMessage>
+    <Message dateMessage="24/10/2024 10:11:00">
+        <infoMessage>¡Hola Alberto! ¿Qué tal?</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 10:12:30">
+        <infoMessage>Todo bien, gracias. ¿Tienes tiempo para revisar el proyecto hoy?</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 10:13:15">
+        <infoMessage>Sí, claro. Lo reviso después del almuerzo y te digo.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 10:14:00">
+        <infoMessage>Perfecto, ¡gracias!</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación entre María y Juan -->
+    <Message dateMessage="24/10/2024 11:20:00">
+        <infoMessage>¡Hola María! ¿Cómo va todo?</infoMessage>
         <receiver>
             <nickName>Maria</nickName>
             <password>pass2</password>
@@ -22,14 +126,47 @@
             <password>pass1</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 10:24:45">
-        <infoMessage>Hola Maria</infoMessage>
+    <Message dateMessage="24/10/2024 11:21:00">
+        <infoMessage>¡Hola Juan! Todo bien, gracias. ¿Y tú?</infoMessage>
+        <receiver>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 11:22:30">
+        <infoMessage>Bien también. ¿Recibiste el archivo que te envié?</infoMessage>
         <receiver>
             <nickName>Maria</nickName>
             <password>pass2</password>
         </receiver>
         <transmitter>
-            <nickName>Jua2n</nickName>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 11:23:15">
+        <infoMessage>Sí, lo vi. Lo estoy revisando, te aviso si encuentro algo.</infoMessage>
+        <receiver>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="24/10/2024 11:24:00">
+        <infoMessage>¡Genial! Gracias por tu ayuda.</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Juan</nickName>
             <password>pass1</password>
         </transmitter>
     </Message>
