@@ -9,7 +9,7 @@
         <password>pass2</password>
     </User>
     <User>
-        <nickName>salva</nickName>
+        <nickName>Salva</nickName>
         <password>12334</password>
     </User>
     <User>
@@ -55,5 +55,13 @@
     <User>
         <nickName>come</nickName>
         <password>pito</password>
+    </User>
+    <User>
+        <nickName>ppp</nickName>
+        <password>ppp</password>
+    </User>
+    <User>
+        <nickName>123</nickName>
+        <password>123</password>
     </User>
 </UserList>

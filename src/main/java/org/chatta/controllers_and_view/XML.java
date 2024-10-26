@@ -2,7 +2,7 @@ package org.chatta.controllers_and_view;
 
 public enum XML {
     USER_XML("XML_User.xml"),
-    MESSAGE_XML("XML_Message.xml");
+    MESSAGE_XML("XML_Messages.xml");
 
     private String url;
 
