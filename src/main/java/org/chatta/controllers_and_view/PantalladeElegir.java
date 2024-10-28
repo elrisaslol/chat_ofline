@@ -155,13 +155,8 @@ public class PantalladeElegir {
             });
             return row;
 
-        });*/
-        // Crear lista de datos
-        ObservableList<DATA> dataList = FXCollections.observableArrayList(
-                new DATA("Alberto", "Hola", "10:30 AM", 5),
-                new DATA("Maria", "Adiós", "11:00 AM", 3)
+        });
 
-        );
 
         // Agregar los datos a la tabla
         tableView.setItems(dataList);
