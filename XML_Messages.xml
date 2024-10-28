@@ -364,4 +364,37 @@
             <password>1234</password>
         </transmitter>
     </Message>
+    <Message dateMessage="28/10/2024 13:09:59">
+        <infoMessage>NO¡</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="28/10/2024 13:11:04">
+        <infoMessage>fhuefpirfiwepoñriafawergars</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="28/10/2024 13:11:12">
+        <infoMessage>rggr</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
 </MessageList>

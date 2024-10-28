@@ -114,6 +114,7 @@ public class PantalladeElegir {
                 if (ultimoMessage != null) {
                     // Agregar datos con el último mensaje encontrado
                     dataList.add(new DATA(
+
                             user.getNickName(),
                             ultimoMessage.getInfoMessage(),
                             ultimoMessage.getDateMessage(),
