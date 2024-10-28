@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MessageList>
-    <!-- Conversación 1: Maria y Salva -->
     <Message dateMessage="25/10/2024 08:45:00">
         <infoMessage>¡Hola Salva! ¿Cómo estás?</infoMessage>
         <receiver>
@@ -23,8 +22,6 @@
             <password>4321</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 2: Alberto y Juan -->
     <Message dateMessage="25/10/2024 09:00:00">
         <infoMessage>Juan, ¿revisaste el archivo que te envié?</infoMessage>
         <receiver>
@@ -47,8 +44,6 @@
             <password>pass1</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 3: Ana y Pablo -->
     <Message dateMessage="25/10/2024 09:30:00">
         <infoMessage>Hola Pablo, ¿podemos hablar sobre el proyecto?</infoMessage>
         <receiver>
@@ -82,8 +77,6 @@
             <password>ana789</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 4: Carmen y Diego -->
     <Message dateMessage="25/10/2024 10:00:00">
         <infoMessage>¡Buenos días, Diego! ¿Ya llegaste a la oficina?</infoMessage>
         <receiver>
@@ -106,8 +99,6 @@
             <password>diego123</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 5: Lucia y Sara -->
     <Message dateMessage="25/10/2024 10:15:00">
         <infoMessage>Hola Sara, ¿cómo va todo?</infoMessage>
         <receiver>
@@ -130,8 +121,6 @@
             <password>sara654</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 6: Maria y Carmen -->
     <Message dateMessage="25/10/2024 10:45:00">
         <infoMessage>¡Hola Carmen! ¿Vas a la reunión más tarde?</infoMessage>
         <receiver>
@@ -154,8 +143,6 @@
             <password>carmen987</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 7: Alberto y Diego -->
     <Message dateMessage="25/10/2024 11:00:00">
         <infoMessage>Diego, ¿puedes revisar el código que subí?</infoMessage>
         <receiver>
@@ -189,8 +176,6 @@
             <password>1234</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 8: Juan y Ana -->
     <Message dateMessage="25/10/2024 11:30:00">
         <infoMessage>Hola Ana, ¿puedes ayudarme con este reporte?</infoMessage>
         <receiver>
@@ -213,8 +198,6 @@
             <password>ana789</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 9: Salva y Lucia -->
     <Message dateMessage="25/10/2024 11:45:00">
         <infoMessage>¡Buenos días, Lucia! ¿Vas a la presentación?</infoMessage>
         <receiver>
@@ -237,8 +220,6 @@
             <password>lucia321</password>
         </transmitter>
     </Message>
-
-    <!-- Conversación 10: Ana y Diego -->
     <Message dateMessage="25/10/2024 12:00:00">
         <infoMessage>Diego, ¿has terminado el informe?</infoMessage>
         <receiver>
@@ -261,8 +242,6 @@
             <password>diego123</password>
         </transmitter>
     </Message>
-
-    <!-- Nueva Conversación: Alberto con todos -->
     <Message dateMessage="26/10/2024 08:30:00">
         <infoMessage>¡Buenos días a todos! Solo quería recordarles que hoy tenemos una reunión a las 10:00.
         </infoMessage>
@@ -374,6 +353,11 @@
             <password>1234</password>
         </transmitter>
     </Message>
-
-
+    <Message dateMessage="28/10/2024 11:33:24">
+        <infoMessage>mongolo</infoMessage>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
 </MessageList>

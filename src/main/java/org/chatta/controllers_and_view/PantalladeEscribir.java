@@ -10,14 +10,20 @@ import java.io.IOException;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.chatta.App;
+import org.chatta.model.connection.XML_Message;
+import org.chatta.model.connection.XML_User;
+import org.chatta.model.entity.Message;
 import org.chatta.model.entity.Sesion;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import utils.LocalTimeAdapter;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.time.LocalDateTime;
 
 public class PantalladeEscribir {
 
@@ -68,6 +74,12 @@ public class PantalladeEscribir {
             // Agregar la etiqueta al contenedor HBox y luego al VBox
             contenedorMensaje.getChildren().add(mensajeLabel);
             mensajeContainer.getChildren().add(contenedorMensaje); // Agrega el mensaje al contenedor
+
+            Message message = new Message(Sesion.getSesion().getUser(),
+                    XML_User.readNickName(obtenerNombreDesdeFuncion()),
+                    textoMensaje);
+
+            XML_Message.writeXML(message);
 
             inputField.clear();  // Limpia el campo de entrada
         }

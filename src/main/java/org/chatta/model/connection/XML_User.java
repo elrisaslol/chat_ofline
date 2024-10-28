@@ -1,5 +1,6 @@
 package org.chatta.model.connection;
 
+import org.chatta.controllers_and_view.XML;
 import org.chatta.model.entity.User;
 import org.chatta.model.entity.UserList;
 
@@ -12,10 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XML_User {
-    public static boolean writeXML(User user, String fileName) {
+    public static boolean writeXML(User user) {
         boolean result = false;
         try {
-            File file = new File(fileName);
+            File file = new File(XML.USER_XML.getURL());
             List<User> users = new ArrayList<>();
 
             // Si el archivo ya existe, leer los mensajes existentes
@@ -72,5 +73,28 @@ public class XML_User {
             e.printStackTrace();
         }
         return message;
+    }
+
+    public static User readNickName(String nickName){
+        User user = null;
+
+        try {
+            JAXBContext context = JAXBContext.newInstance(UserList.class);
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            UserList list = (UserList) unmarshaller.unmarshal(new File(XML.USER_XML.getURL()));
+            List<User> users = list.getUsers();
+
+            for (User readUsers : users){
+                if (readUsers.getNickName() == nickName){
+                    user = readUsers;
+                    break;
+                }
+            }
+
+        }catch (JAXBException e){
+            e.printStackTrace();
+        }
+
+        return user;
     }
 }

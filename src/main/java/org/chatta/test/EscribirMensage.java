@@ -11,7 +11,7 @@ public class EscribirMensage {
         Message message = new Message(new User("Jua2n", "pass1"), new User("Maria", "pass2"), "Hola Maria");
 
         // Escribir un mensaje en el archivo XML
-        boolean success = XML_Message.writeXML(message, "XML_Messages.xml");
+        boolean success = XML_Message.writeXML(message);
         if (success) {
             System.out.println("Mensaje escrito correctamente.");
         } else {
