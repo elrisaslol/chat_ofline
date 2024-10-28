@@ -1,11 +1,13 @@
 package org.chatta.controllers_and_view;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import org.chatta.App;
 import org.chatta.model.entity.Sesion;
@@ -16,6 +18,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+
 public class PantalladeEscribir {
 
     @FXML
@@ -35,7 +38,6 @@ public class PantalladeEscribir {
         nombreusuario.setText("Usuario desconocido");
     }
 
-
     public void recibirNombre(String nombre) {
         if (nombre != null) {
             nombreusuario.setText(nombre); // Establece el nombre en el TextArea
@@ -52,10 +54,21 @@ public class PantalladeEscribir {
     @FXML
     private void enviarMensaje() {
         String textoMensaje = inputField.getText().trim();
+        System.out.println("Texto del mensaje: " + textoMensaje);
         if (!textoMensaje.isEmpty()) {
-            Label mensaje = new Label(textoMensaje);
-            mensaje.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15; -fx-margin: 5;");
-            mensajeContainer.getChildren().add(mensaje); // Agrega el mensaje al contenedor
+            // Crear un contenedor HBox para alinear el mensaje
+            HBox contenedorMensaje = new HBox();
+            Label mensajeLabel = new Label(textoMensaje);
+            mensajeLabel.setWrapText(true);  // Permitir que el texto se envuelva
+
+            // Estilo para el mensaje del emisor
+            mensajeLabel.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15; -fx-margin: 5;");
+            contenedorMensaje.setAlignment(Pos.TOP_RIGHT);  // Alinear a la derecha para el emisor
+
+            // Agregar la etiqueta al contenedor HBox y luego al VBox
+            contenedorMensaje.getChildren().add(mensajeLabel);
+            mensajeContainer.getChildren().add(contenedorMensaje); // Agrega el mensaje al contenedor
+
             inputField.clear();  // Limpia el campo de entrada
         }
     }
@@ -87,13 +100,29 @@ public class PantalladeEscribir {
                     String transmisor = ((Element) mensaje.getElementsByTagName("transmitter").item(0))
                             .getElementsByTagName("nickName").item(0).getTextContent();
 
-                    // Verifica si el receptor o transmisor coincide con uno de los dos nombres
-                    if (receptor.equals(nombreFuncion) || receptor.equals(nombreSingleton) ||
-                            transmisor.equals(nombreFuncion) || transmisor.equals(nombreSingleton)) {
+                    // Verifica si el receptor y transmisor coincide
+                    if (receptor.equals(nombreFuncion) && transmisor.equals(nombreSingleton) ||
+                            transmisor.equals(nombreFuncion) && receptor.equals(nombreSingleton)) {
 
+                        // Crear un contenedor HBox para alinear los mensajes
+                        HBox contenedorMensaje = new HBox();
                         Label mensajeLabel = new Label(mensajeTexto);
-                        mensajeLabel.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15;");
-                        mensajeContainer.getChildren().add(mensajeLabel);
+                        mensajeLabel.setWrapText(true);  // Permitir que el texto se envuelva
+
+                        // Estilo y alineación según quien es el receptor o el emisor
+                        if (receptor.equals(nombreSingleton) && transmisor.equals(nombreFuncion)) {
+                            // Mensaje del receptor (alineación a la izquierda)
+                            mensajeLabel.setStyle("-fx-background-color: lightgreen; -fx-padding: 10; -fx-background-radius: 15; -fx-margin: 5;");
+                            contenedorMensaje.setAlignment(Pos.TOP_LEFT);
+                        } else {
+                            // Mensaje del emisor (alineación a la derecha)
+                            mensajeLabel.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15; -fx-margin: 5;");
+                            contenedorMensaje.setAlignment(Pos.TOP_RIGHT);
+                        }
+
+                        // Agregar la etiqueta al contenedor HBox y luego al VBox
+                        contenedorMensaje.getChildren().add(mensajeLabel);
+                        mensajeContainer.getChildren().add(contenedorMensaje);
                     }
                 }
             }
@@ -107,4 +136,3 @@ public class PantalladeEscribir {
         return nombreusuario.getText();
     }
 }
-

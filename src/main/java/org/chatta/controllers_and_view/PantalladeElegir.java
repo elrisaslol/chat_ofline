@@ -136,10 +136,8 @@ public class PantalladeElegir {
         });*/
         // Crear lista de datos
         ObservableList<DATA> dataList = FXCollections.observableArrayList(
-                new DATA("Juan", "Hola", "10:30 AM", 5),
-                new DATA("Maria", "Adiós", "11:00 AM", 3),
-                new DATA("2", "Adiós", "11:00 AM", 3),
-                new DATA("Luis", "Nos vemos", "12:45 PM", 7)
+                new DATA("Alberto", "Hola", "10:30 AM", 5),
+                new DATA("Maria", "Adiós", "11:00 AM", 3)
 
         );
 
