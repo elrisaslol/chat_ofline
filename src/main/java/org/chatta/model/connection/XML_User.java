@@ -84,17 +84,23 @@ public class XML_User {
             UserList list = (UserList) unmarshaller.unmarshal(new File(XML.USER_XML.getURL()));
             List<User> users = list.getUsers();
 
+            System.out.println("Número de usuarios leídos: " + users.size()); // Verificación
+
             for (User readUsers : users){
-                if (readUsers.getNickName() == nickName){
+                System.out.println("Buscando usuario: " + readUsers.getNickName()); // Impresión para depuración
+                if (readUsers.getNickName().equals(nickName)){ // Asegúrate de usar equals
                     user = readUsers;
                     break;
                 }
             }
 
-        }catch (JAXBException e){
+        } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         return user;
     }
+
+
+
 }

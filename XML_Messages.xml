@@ -353,8 +353,12 @@
             <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="28/10/2024 11:33:24">
-        <infoMessage>mongolo</infoMessage>
+    <Message dateMessage="28/10/2024 12:41:34">
+        <infoMessage>Deja los tanques</infoMessage>
+        <receiver>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </receiver>
         <transmitter>
             <nickName>Alberto</nickName>
             <password>1234</password>

@@ -19,7 +19,6 @@ public class User {
     public String getNickName() {
         return nickName;
     }
-// getPassword no se puede quitar porque da fallo al pasar a XML
     public String getPassword() {
         return password;
     }
@@ -27,7 +26,6 @@ public class User {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }

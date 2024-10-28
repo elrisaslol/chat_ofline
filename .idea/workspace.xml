@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e92a3f68-7a06-4b69-b9f0-18371a67c9c1" name="Changes" comment="principio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/model/connection/XML_User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirMensage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/EscribirUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/test/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.executable.executor": "Run",
+    "Application.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Alberto",
@@ -70,6 +67,13 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1730105589614</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e92a3f68-7a06-4b69-b9f0-18371a67c9c1" name="Changes" comment="principio" />
+      <created>1730114319459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730114319459</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
