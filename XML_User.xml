@@ -57,13 +57,15 @@
         <password>pito</password>
     </User>
     <User>
-
         <nickName>ppp</nickName>
         <password>ppp</password>
     </User>
     <User>
         <nickName>123</nickName>
         <password>123</password>
-
+    </User>
+    <User>
+        <nickName>prueba1</nickName>
+        <password>1234</password>
     </User>
 </UserList>
