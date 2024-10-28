@@ -2,10 +2,13 @@ package org.chatta.controllers_and_view;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -19,12 +22,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import utils.LocalTimeAdapter;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.time.LocalDateTime;
 
 public class PantalladeEscribir {
 
@@ -149,5 +150,43 @@ public class PantalladeEscribir {
     private String obtenerNombreDesdeFuncion() {
         // Implementa este método para devolver el nombre almacenado en tu función.
         return nombreusuario.getText();
+    }
+
+    @FXML
+    public void exportarConversacionATxt() {
+        File archivo = new File("Conversación de "+Sesion.getSesion().getUser().getNickName() +" y " +obtenerNombreDesdeFuncion());
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivo))) {
+            for (javafx.scene.Node nodo : mensajeContainer.getChildren()) {
+                if (nodo instanceof HBox) {
+                    HBox hbox = (HBox) nodo;
+                    for (javafx.scene.Node labelNode : hbox.getChildren()) {
+                        if (labelNode instanceof Label) {
+                            Label mensajeLabel = (Label) labelNode;
+                            String textoMensaje = mensajeLabel.getText();
+                            writer.write(textoMensaje);
+                            writer.newLine();
+                        }
+                    }
+                }
+            }
+            System.out.println("Conversación exportada a conversacion.txt");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Conversación exportada a conversacion.txt");
+            alert.setHeaderText("Conversación exportada a conversacion.txt");
+            alert.setContentText("Conversación exportada a conversacion.txt correctamente");
+
+            alert.showAndWait();
+
+        } catch (IOException e) {
+            System.out.println("Error al exportar la conversación: " + e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Conversación exportada a conversacion.txt");
+            alert.setHeaderText("Error al exportar la conversación.txt");
+            alert.setContentText(" Error al exportar a conversacion.txt ");
+
+            alert.showAndWait();
+
+            e.printStackTrace();
+        }
     }
 }
