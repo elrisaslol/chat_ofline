@@ -56,4 +56,20 @@
         <nickName>come</nickName>
         <password>pito</password>
     </User>
+    <User>
+        <nickName>paco</nickName>
+        <password>1</password>
+    </User>
+    <User>
+        <nickName>1</nickName>
+        <password>1</password>
+    </User>
+    <User>
+        <nickName>e</nickName>
+        <password>e</password>
+    </User>
+    <User>
+        <nickName>4</nickName>
+        <password>4</password>
+    </User>
 </UserList>

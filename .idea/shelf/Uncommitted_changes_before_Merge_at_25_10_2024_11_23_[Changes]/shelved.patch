@@ -1,0 +1,243 @@
+Index: src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.chatta.controllers_and_view;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.TextArea;\r\nimport javafx.scene.control.TextField;\r\nimport java.io.IOException;\r\nimport org.chatta.App;\r\n\r\npublic class PantalladeEscribir {\r\n\r\n    @FXML\r\n    private TextArea mensajeArea1;\r\n\r\n    @FXML\r\n    private TextArea mensajeArea2;\r\n\r\n    @FXML\r\n    private TextArea mensajeArea3;\r\n\r\n    @FXML\r\n    private TextArea mensajeArea4;\r\n\r\n    @FXML\r\n    private TextField inputField;\r\n\r\n    @FXML\r\n    private TextArea nombreusuario; // Asegúrate de que este campo coincida con el fx:id en el FXML\r\n\r\n    @FXML\r\n    public void initialize() {\r\n        // Inicializaciones adicionales si son necesarias\r\n        // Por ejemplo, puedes limpiar el TextArea de nombre de usuario al inicio\r\n        nombreusuario.setText(\"Usuario desconocido\");\r\n    }\r\n\r\n    // Cambié el modificador a `public` para que sea accesible desde el otro controlador\r\n    public void recibirNombre(String nombre) {\r\n        if (nombre != null) {\r\n            nombreusuario.setText(nombre); // Establece el nombre en el TextArea\r\n        } else {\r\n            nombreusuario.setText(\"Usuario desconocido\");\r\n        }\r\n    }\r\n\r\n    @FXML\r\n    private void SwitchToPantalladeElegir() throws IOException {\r\n        App.setRoot(scenes.PANTALLADEELEGIR);\r\n    }\r\n\r\n    @FXML\r\n    private void enviarMensaje() {\r\n        String mensaje = inputField.getText();\r\n        if (!mensaje.isEmpty()) {\r\n            mensajeArea1.appendText(mensaje + \"\\n\"); // Agregar el mensaje al TextArea\r\n            inputField.clear(); // Limpiar el campo de entrada\r\n        }\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java b/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java
+--- a/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java	(revision 0a287375f73c19b151de30da4de4021b9bceb84b)
++++ b/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java	(date 1729843109800)
+@@ -1,39 +1,44 @@
+ package org.chatta.controllers_and_view;
+ 
+ import javafx.fxml.FXML;
++import javafx.scene.control.Label;
+ import javafx.scene.control.TextArea;
+ import javafx.scene.control.TextField;
++
++import java.io.File;
+ import java.io.IOException;
++
++import javafx.scene.layout.VBox;
+ import org.chatta.App;
++import org.w3c.dom.Document;
++import org.w3c.dom.Node;
++import org.w3c.dom.NodeList;
++import javax.xml.parsers.DocumentBuilder;
++import javax.xml.parsers.DocumentBuilderFactory;
++import org.w3c.dom.Element;
++
++
++
+ 
+ public class PantalladeEscribir {
+ 
+-    @FXML
+-    private TextArea mensajeArea1;
+ 
+     @FXML
+-    private TextArea mensajeArea2;
+-
+-    @FXML
+-    private TextArea mensajeArea3;
+-
+-    @FXML
+-    private TextArea mensajeArea4;
++    private VBox mensajeContainer;
+ 
+     @FXML
+     private TextField inputField;
+ 
+     @FXML
+-    private TextArea nombreusuario; // Asegúrate de que este campo coincida con el fx:id en el FXML
++    private TextArea nombreusuario;
+ 
+     @FXML
+     public void initialize() {
+-        // Inicializaciones adicionales si son necesarias
+-        // Por ejemplo, puedes limpiar el TextArea de nombre de usuario al inicio
++        cargarMensajesDesdeXML("XML_Messages.xml");
+         nombreusuario.setText("Usuario desconocido");
+     }
+ 
+-    // Cambié el modificador a `public` para que sea accesible desde el otro controlador
++
+     public void recibirNombre(String nombre) {
+         if (nombre != null) {
+             nombreusuario.setText(nombre); // Establece el nombre en el TextArea
+@@ -47,12 +52,48 @@
+         App.setRoot(scenes.PANTALLADEELEGIR);
+     }
+ 
++    // Método para enviar el mensaje
+     @FXML
+     private void enviarMensaje() {
+-        String mensaje = inputField.getText();
+-        if (!mensaje.isEmpty()) {
+-            mensajeArea1.appendText(mensaje + "\n"); // Agregar el mensaje al TextArea
+-            inputField.clear(); // Limpiar el campo de entrada
++        String textoMensaje = inputField.getText().trim();
++        if (!textoMensaje.isEmpty()) {
++            Label mensaje = new Label(textoMensaje);
++            mensaje.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15; -fx-margin: 10 5 10 5;");
++            mensajeContainer.getChildren().add(mensaje); // Agrega el mensaje al contenedor
++            inputField.clear();  // Limpia el campo de entrada
++        }
++    }
++    public void cargarMensajesDesdeXML(String rutaArchivo) {
++        try {
++            File xmlFile = new File(rutaArchivo);
++            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
++            DocumentBuilder builder = factory.newDocumentBuilder();
++            Document doc = builder.parse(xmlFile);
++
++            doc.getDocumentElement().normalize();
++            NodeList messageList = doc.getElementsByTagName("Message");
++
++            // Recorrer los mensajes y añadirlos al VBox
++            for (int i = 0; i < messageList.getLength(); i++) {
++                Node messageNode = messageList.item(i);
++
++                if (messageNode.getNodeType() == Node.ELEMENT_NODE) {
++                    Element messageElement = (Element) messageNode;
++
++                    String dateMessage = messageElement.getAttribute("dateMessage");
++                    String infoMessage = messageElement.getElementsByTagName("infoMessage")
++                            .item(0).getTextContent();
++
++                    // Crear y configurar el Label para el mensaje
++                    Label label = new Label(dateMessage + ": " + infoMessage);
++                    label.setStyle("-fx-background-color: lightblue; -fx-padding: 10; -fx-background-radius: 15;");
++
++                    // Añadir el Label al VBox
++                    mensajeContainer.getChildren().add(label);
++                }
++            }
++        } catch (Exception e) {
++            e.printStackTrace();
+         }
+     }
+ }
+Index: src/main/resources/org/chatta/controllers_and_view/escribir.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.Cursor?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.TextArea?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.layout.Pane?>\r\n<?import javafx.scene.shape.Rectangle?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<Pane minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"480.0\" prefWidth=\"640.0\" xmlns=\"http://javafx.com/javafx/23\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"org.chatta.controllers_and_view.PantalladeEscribir\">\r\n    <padding>\r\n        <Insets bottom=\"5.0\" left=\"5.0\" right=\"5.0\" top=\"5.0\" />\r\n    </padding>\r\n    <Rectangle fill=\"DODGERBLUE\" height=\"480.0\" stroke=\"BLACK\" strokeType=\"INSIDE\" width=\"640.0\" />\r\n    <Button layoutX=\"576.0\" layoutY=\"27.0\" mnemonicParsing=\"false\" onMouseClicked=\"#SwitchToPantalladeElegir\" text=\"volver\" />\r\n    <Rectangle fill=\"WHITE\" height=\"340.0\" layoutX=\"86.0\" layoutY=\"70.0\" stroke=\"BLACK\" strokeType=\"INSIDE\" width=\"469.0\" />\r\n    <Button layoutX=\"574.0\" layoutY=\"425.0\" mnemonicParsing=\"false\" onMouseClicked=\"#enviarMensaje\" text=\"enviar\" textAlignment=\"CENTER\" />\r\n    <TextArea fx:id=\"mensajeArea1\" editable=\"false\" layoutX=\"98.0\" layoutY=\"83.0\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"67.0\" prefWidth=\"244.0\" style=\"-fx-background-color: green;\" />\r\n    <TextArea fx:id=\"mensajeArea2\" editable=\"false\" layoutX=\"303.0\" layoutY=\"157.0\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"67.0\" prefWidth=\"244.0\" style=\"-fx-background-color: blue;\" />\r\n    <TextArea fx:id=\"mensajeArea3\" editable=\"false\" layoutX=\"98.0\" layoutY=\"240.0\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"67.0\" prefWidth=\"244.0\" style=\"-fx-background-color: green;\" />\r\n    <TextArea fx:id=\"mensajeArea4\" editable=\"false\" layoutX=\"303.0\" layoutY=\"319.0\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"67.0\" prefWidth=\"244.0\" style=\"-fx-background-color: blue;\" />\r\n    <TextField fx:id=\"inputField\" layoutX=\"84.0\" layoutY=\"425.0\" prefHeight=\"25.0\" prefWidth=\"469.0\">\r\n      <cursor>\r\n         <Cursor fx:constant=\"TEXT\" />\r\n      </cursor></TextField>\r\n    <TextArea fx:id=\"nombreusuario\" editable=\"false\" layoutX=\"30.0\" layoutY=\"18.0\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" prefHeight=\"44.0\" prefWidth=\"247.0\">\r\n        <font>\r\n            <Font name=\"Times New Roman\" size=\"22.0\" />\r\n        </font>\r\n    </TextArea>\r\n</Pane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/org/chatta/controllers_and_view/escribir.fxml b/src/main/resources/org/chatta/controllers_and_view/escribir.fxml
+--- a/src/main/resources/org/chatta/controllers_and_view/escribir.fxml	(revision 0a287375f73c19b151de30da4de4021b9bceb84b)
++++ b/src/main/resources/org/chatta/controllers_and_view/escribir.fxml	(date 1729842639463)
+@@ -3,9 +3,11 @@
+ <?import javafx.geometry.Insets?>
+ <?import javafx.scene.Cursor?>
+ <?import javafx.scene.control.Button?>
++<?import javafx.scene.control.ScrollPane?>
+ <?import javafx.scene.control.TextArea?>
+ <?import javafx.scene.control.TextField?>
+ <?import javafx.scene.layout.Pane?>
++<?import javafx.scene.layout.VBox?>
+ <?import javafx.scene.shape.Rectangle?>
+ <?import javafx.scene.text.Font?>
+ 
+@@ -15,16 +17,19 @@
+     </padding>
+     <Rectangle fill="DODGERBLUE" height="480.0" stroke="BLACK" strokeType="INSIDE" width="640.0" />
+     <Button layoutX="576.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#SwitchToPantalladeElegir" text="volver" />
+-    <Rectangle fill="WHITE" height="340.0" layoutX="86.0" layoutY="70.0" stroke="BLACK" strokeType="INSIDE" width="469.0" />
+     <Button layoutX="574.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#enviarMensaje" text="enviar" textAlignment="CENTER" />
+-    <TextArea fx:id="mensajeArea1" editable="false" layoutX="98.0" layoutY="83.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: green;" />
+-    <TextArea fx:id="mensajeArea2" editable="false" layoutX="303.0" layoutY="157.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: blue;" />
+-    <TextArea fx:id="mensajeArea3" editable="false" layoutX="98.0" layoutY="240.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: green;" />
+-    <TextArea fx:id="mensajeArea4" editable="false" layoutX="303.0" layoutY="319.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="67.0" prefWidth="244.0" style="-fx-background-color: blue;" />
+-    <TextField fx:id="inputField" layoutX="84.0" layoutY="425.0" prefHeight="25.0" prefWidth="469.0">
++   <TextField fx:id="inputField" layoutX="84.0" layoutY="425.0" prefHeight="25.0" prefWidth="469.0">
+       <cursor>
+          <Cursor fx:constant="TEXT" />
+       </cursor></TextField>
++    <ScrollPane hbarPolicy="NEVER" layoutX="84.0" layoutY="70.0" maxWidth="-Infinity" minHeight="-Infinity"
++                minWidth="-Infinity" prefHeight="340.0" prefWidth="469.0">
++        <VBox fx:id="mensajeContainer" prefWidth="580.0" spacing="10">
++            <padding>
++                <Insets top="10" right="10" bottom="10" left="10"/>
++            </padding>
++        </VBox>
++    </ScrollPane>
+     <TextArea fx:id="nombreusuario" editable="false" layoutX="30.0" layoutY="18.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="247.0">
+         <font>
+             <Font name="Times New Roman" size="22.0" />
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"06635743-6248-45fd-b4ea-1393a12b7fe3\" name=\"Changes\" comment=\"principio\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Enum\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"blitz\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"HARD\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;elrisaslol&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/elrisaslol/chat_ofline\",\r\n    \"accountId\": \"76217981-47eb-400e-aa84-7700267218b4\"\r\n  },\r\n  \"recentNewPullRequestHead\": {\r\n    \"server\": {\r\n      \"useHttp\": false,\r\n      \"host\": \"github.com\",\r\n      \"port\": null,\r\n      \"suffix\": null\r\n    },\r\n    \"owner\": \"elrisaslol\",\r\n    \"repository\": \"chat_ofline\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2nVu4zjiH1iOP1bCA6tMatsmrOC\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.App.executor&quot;: &quot;Run&quot;,\r\n    &quot;Application.executable.executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;si&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ IDEA Community/IntelliJ IDEA Community project folder/chat_ofline-master&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\IntelliJ IDEA Community\\IntelliJ IDEA Community project folder\\chat ofline\\src\\main\\resources\\org\\chatta\\view\" />\r\n      <recent name=\"D:\\IntelliJ IDEA Community\\IntelliJ IDEA Community project folder\\chat ofline\\src\\main\\resources\\org\\chatta\" />\r\n      <recent name=\"D:\\IntelliJ IDEA Community\\IntelliJ IDEA Community project folder\\chat ofline\\src\\main\\resources\\aa\" />\r\n      <recent name=\"D:\\IntelliJ IDEA Community\\IntelliJ IDEA Community project folder\\chat ofline\\src\\main\\resources\\org.chatta\\assets\" />\r\n      <recent name=\"D:\\IntelliJ IDEA Community\\IntelliJ IDEA Community project folder\\chat ofline\\src\\main\\resources\\org.chatta\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.executable\">\r\n    <configuration name=\"App\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.chatta.App\" />\r\n      <module name=\"chat_ofline\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.chatta.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"executable\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.chatta.executable\" />\r\n      <module name=\"chat_ofline\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"org.chatta.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.executable\" />\r\n        <item itemvalue=\"Application.App\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"06635743-6248-45fd-b4ea-1393a12b7fe3\" name=\"Changes\" comment=\"\" />\r\n      <created>1729070379341</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729070379341</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729070516012</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729070516012</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729148459060</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729148459060</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729153459950</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729153459950</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729153486027</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729153486027</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729238667664</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729238667664</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729671424838</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729671424838</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729672144834</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729672144835</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729672171165</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729672171165</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729673564602</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729673564602</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729751716815</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729751716815</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729754247979</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729754247979</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729754504044</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729754504044</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729755016419</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729755016419</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729838698055</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729838698055</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"principio\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729839298125</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729839298125</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"16\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/blitz\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"principio\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"principio\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>\r\n          <line>11</line>\r\n          <properties class=\"utils.LocalTimeAdapter\" method=\"convertLocalTimeToString\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/org/chatta/utils/LocalTimeAdapter.java</url>\r\n          <line>12</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0a287375f73c19b151de30da4de4021b9bceb84b)
++++ b/.idea/workspace.xml	(date 1729847363850)
+@@ -6,7 +6,9 @@
+   <component name="ChangeListManager">
+     <list default="true" id="06635743-6248-45fd-b4ea-1393a12b7fe3" name="Changes" comment="principio">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInscripcion.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/XML_User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_User.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -249,7 +251,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1729839298125</updated>
+     </task>
+-    <option name="localTasksCounter" value="16" />
++    <task id="LOCAL-00016" summary="principio">
++      <option name="closed" value="true" />
++      <created>1729839778266</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1729839778266</updated>
++    </task>
++    <option name="localTasksCounter" value="17" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -263,7 +273,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/blitz" />
++                        <option value="origin/master" />
+                       </list>
+                     </value>
+                   </entry>
+Index: XML_User.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<UserList>\r\n    <User>\r\n        <nickName>Juan</nickName>\r\n        <password>pass1</password>\r\n    </User>\r\n    <User>\r\n        <nickName>Maria</nickName>\r\n        <password>pass2</password>\r\n    </User>\r\n    <User>\r\n        <nickName>salva</nickName>\r\n        <password>12334</password>\r\n    </User>\r\n    <User>\r\n        <nickName>pepito</nickName>\r\n        <password>1234</password>\r\n    </User>\r\n    <User>\r\n        <nickName>pepa</nickName>\r\n        <password>1</password>\r\n    </User>\r\n</UserList>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/XML_User.xml b/XML_User.xml
+--- a/XML_User.xml	(revision 0a287375f73c19b151de30da4de4021b9bceb84b)
++++ b/XML_User.xml	(date 1729846188305)
+@@ -20,4 +20,16 @@
+         <nickName>pepa</nickName>
+         <password>1</password>
+     </User>
++    <User>
++        <nickName>paco</nickName>
++        <password>1</password>
++    </User>
++    <User>
++        <nickName>1</nickName>
++        <password>1</password>
++    </User>
++    <User>
++        <nickName>e</nickName>
++        <password>e</password>
++    </User>
+ </UserList>

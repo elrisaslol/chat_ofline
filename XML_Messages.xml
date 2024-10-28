@@ -11,26 +11,65 @@
             <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="23/10/2024 10:41:03">
-        <infoMessage>Hola Maria</infoMessage>
+
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>Hola</infoMessage>
         <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
+            <nickName>Alberto</nickName>
+            <password>4321</password>
         </receiver>
         <transmitter>
-            <nickName>Juan</nickName>
-            <password>pass1</password>
+            <nickName>Salva</nickName>
+            <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 10:24:45">
-        <infoMessage>Hola Maria</infoMessage>
+
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>esto va a funcionar</infoMessage>
         <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
+            <nickName>Salva</nickName>
+            <password>4321</password>
         </receiver>
         <transmitter>
-            <nickName>Jua2n</nickName>
-            <password>pass1</password>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
         </transmitter>
     </Message>
+
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>NO</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>esto va a funcionar</infoMessage>
+        <receiver>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+
+    <Message dateMessage="23/10/2024 10:35:10">
+        <infoMessage>NO</infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>4321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+
 </MessageList>
