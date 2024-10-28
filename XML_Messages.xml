@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <MessageList>
-    <!-- Conversación entre María y Salva -->
-    <Message dateMessage="24/10/2024 09:00:00">
-        <infoMessage>¡Hola María! ¿Cómo estás?</infoMessage>
-        <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </receiver>
-        <transmitter>
-            <nickName>Salva</nickName>
-            <password>4321</password>
-        </transmitter>
-    </Message>
-    <Message dateMessage="24/10/2024 09:01:00">
-        <infoMessage>¡Hola Salva! Bien, ¿y tú?</infoMessage>
+    <!-- Conversación 1: Maria y Salva -->
+    <Message dateMessage="25/10/2024 08:45:00">
+        <infoMessage>¡Hola Salva! ¿Cómo estás?</infoMessage>
         <receiver>
             <nickName>Salva</nickName>
             <password>4321</password>
@@ -23,30 +12,8 @@
             <password>pass2</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 09:02:30">
-        <infoMessage>Todo bien. Oye, ¿viste la última serie de la que te hablé?</infoMessage>
-        <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </receiver>
-        <transmitter>
-            <nickName>Salva</nickName>
-            <password>4321</password>
-        </transmitter>
-    </Message>
-    <Message dateMessage="24/10/2024 09:03:15">
-        <infoMessage>¡Sí! La empecé anoche. Está muy interesante.</infoMessage>
-        <receiver>
-            <nickName>Salva</nickName>
-            <password>4321</password>
-        </receiver>
-        <transmitter>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </transmitter>
-    </Message>
-    <Message dateMessage="24/10/2024 09:04:10">
-        <infoMessage>Genial, luego me cuentas qué te parece el final. ¡No te lo esperas!</infoMessage>
+    <Message dateMessage="25/10/2024 08:46:00">
+        <infoMessage>¡Hola María! Bien, ¿y tú?</infoMessage>
         <receiver>
             <nickName>Maria</nickName>
             <password>pass2</password>
@@ -57,12 +24,165 @@
         </transmitter>
     </Message>
 
-    <!-- Conversación entre María y Alberto -->
-    <Message dateMessage="24/10/2024 10:10:00">
-        <infoMessage>¡Buenos días, María!</infoMessage>
+    <!-- Conversación 2: Alberto y Juan -->
+    <Message dateMessage="25/10/2024 09:00:00">
+        <infoMessage>Juan, ¿revisaste el archivo que te envié?</infoMessage>
+        <receiver>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 09:02:00">
+        <infoMessage>Sí, todo se ve bien. Buen trabajo.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 3: Ana y Pablo -->
+    <Message dateMessage="25/10/2024 09:30:00">
+        <infoMessage>Hola Pablo, ¿podemos hablar sobre el proyecto?</infoMessage>
+        <receiver>
+            <nickName>Pablo</nickName>
+            <password>pablo456</password>
+        </receiver>
+        <transmitter>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 09:31:00">
+        <infoMessage>Claro, ¿qué necesitas saber?</infoMessage>
+        <receiver>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </receiver>
+        <transmitter>
+            <nickName>Pablo</nickName>
+            <password>pablo456</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 09:32:30">
+        <infoMessage>Tengo dudas sobre los requisitos técnicos.</infoMessage>
+        <receiver>
+            <nickName>Pablo</nickName>
+            <password>pablo456</password>
+        </receiver>
+        <transmitter>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 4: Carmen y Diego -->
+    <Message dateMessage="25/10/2024 10:00:00">
+        <infoMessage>¡Buenos días, Diego! ¿Ya llegaste a la oficina?</infoMessage>
+        <receiver>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </receiver>
+        <transmitter>
+            <nickName>Carmen</nickName>
+            <password>carmen987</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 10:01:00">
+        <infoMessage>¡Sí! Estoy por aquí, ¿te paso a buscar para el café?</infoMessage>
+        <receiver>
+            <nickName>Carmen</nickName>
+            <password>carmen987</password>
+        </receiver>
+        <transmitter>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 5: Lucia y Sara -->
+    <Message dateMessage="25/10/2024 10:15:00">
+        <infoMessage>Hola Sara, ¿cómo va todo?</infoMessage>
+        <receiver>
+            <nickName>Sara</nickName>
+            <password>sara654</password>
+        </receiver>
+        <transmitter>
+            <nickName>Lucia</nickName>
+            <password>lucia321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 10:16:00">
+        <infoMessage>¡Hola Lucia! Bien, gracias. ¿Y tú?</infoMessage>
+        <receiver>
+            <nickName>Lucia</nickName>
+            <password>lucia321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Sara</nickName>
+            <password>sara654</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 6: Maria y Carmen -->
+    <Message dateMessage="25/10/2024 10:45:00">
+        <infoMessage>¡Hola Carmen! ¿Vas a la reunión más tarde?</infoMessage>
+        <receiver>
+            <nickName>Carmen</nickName>
+            <password>carmen987</password>
+        </receiver>
+        <transmitter>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 10:46:00">
+        <infoMessage>Sí, nos vemos allí.</infoMessage>
         <receiver>
             <nickName>Maria</nickName>
             <password>pass2</password>
+        </receiver>
+        <transmitter>
+            <nickName>Carmen</nickName>
+            <password>carmen987</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 7: Alberto y Diego -->
+    <Message dateMessage="25/10/2024 11:00:00">
+        <infoMessage>Diego, ¿puedes revisar el código que subí?</infoMessage>
+        <receiver>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </receiver>
+        <transmitter>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 11:01:00">
+        <infoMessage>Claro, le echo un vistazo ahora.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 11:03:00">
+        <infoMessage>¡Gracias!</infoMessage>
+        <receiver>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
         </receiver>
         <transmitter>
             <nickName>Alberto</nickName>
@@ -70,32 +190,93 @@
         </transmitter>
     </Message>
 
-    <Message dateMessage="24/10/2024 10:11:00">
-        <infoMessage>¡Hola Alberto! ¿Qué tal?</infoMessage>
+    <!-- Conversación 8: Juan y Ana -->
+    <Message dateMessage="25/10/2024 11:30:00">
+        <infoMessage>Hola Ana, ¿puedes ayudarme con este reporte?</infoMessage>
         <receiver>
-            <nickName>Alberto</nickName>
-            <password>1234</password>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
         </receiver>
         <transmitter>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 10:12:30">
-        <infoMessage>Todo bien, gracias. ¿Tienes tiempo para revisar el proyecto hoy?</infoMessage>
-
+    <Message dateMessage="25/10/2024 11:31:00">
+        <infoMessage>Claro, pásamelo y lo reviso.</infoMessage>
         <receiver>
-            <nickName>Alberto</nickName>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </receiver>
+        <transmitter>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </transmitter>
+    </Message>
+
+    <!-- Conversación 9: Salva y Lucia -->
+    <Message dateMessage="25/10/2024 11:45:00">
+        <infoMessage>¡Buenos días, Lucia! ¿Vas a la presentación?</infoMessage>
+        <receiver>
+            <nickName>Lucia</nickName>
+            <password>lucia321</password>
+        </receiver>
+        <transmitter>
+            <nickName>Salva</nickName>
+            <password>4321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 11:46:00">
+        <infoMessage>¡Sí, ahí estaré! ¿Ya preparaste tu parte?</infoMessage>
+        <receiver>
+            <nickName>Salva</nickName>
             <password>4321</password>
         </receiver>
         <transmitter>
+            <nickName>Lucia</nickName>
+            <password>lucia321</password>
+        </transmitter>
+    </Message>
 
+    <!-- Conversación 10: Ana y Diego -->
+    <Message dateMessage="25/10/2024 12:00:00">
+        <infoMessage>Diego, ¿has terminado el informe?</infoMessage>
+        <receiver>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </receiver>
+        <transmitter>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="25/10/2024 12:01:00">
+        <infoMessage>Casi, solo me falta un par de detalles.</infoMessage>
+        <receiver>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </receiver>
+        <transmitter>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </transmitter>
+    </Message>
+
+    <!-- Nueva Conversación: Alberto con todos -->
+    <Message dateMessage="26/10/2024 08:30:00">
+        <infoMessage>¡Buenos días a todos! Solo quería recordarles que hoy tenemos una reunión a las 10:00.
+        </infoMessage>
+        <receiver>
+            <nickName>Maria</nickName>
+            <password>pass2</password>
+        </receiver>
+        <transmitter>
             <nickName>Alberto</nickName>
             <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 10:13:15">
-        <infoMessage>Sí, claro. Lo reviso después del almuerzo y te digo.</infoMessage>
+    <Message dateMessage="26/10/2024 08:30:30">
+        <infoMessage>¡Buenos días, Alberto! Gracias por recordarlo. Ahí estaré.</infoMessage>
         <receiver>
             <nickName>Alberto</nickName>
             <password>1234</password>
@@ -105,76 +286,94 @@
             <password>pass2</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 10:14:00">
-        <infoMessage>Perfecto, ¡gracias!</infoMessage>
+    <Message dateMessage="26/10/2024 08:31:00">
+        <infoMessage>¡Entendido! Nos vemos a las 10:00.</infoMessage>
         <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </receiver>
-        <transmitter>
             <nickName>Alberto</nickName>
             <password>1234</password>
-        </transmitter>
-    </Message>
-
-    <!-- Conversación entre María y Juan -->
-    <Message dateMessage="24/10/2024 11:20:00">
-        <infoMessage>¡Hola María! ¿Cómo va todo?</infoMessage>
-        <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
         </receiver>
         <transmitter>
-            <nickName>Juan</nickName>
-            <password>pass1</password>
-        </transmitter>
-    </Message>
-    <Message dateMessage="24/10/2024 11:21:00">
-        <infoMessage>¡Hola Juan! Todo bien, gracias. ¿Y tú?</infoMessage>
-        <receiver>
-            <nickName>Juan</nickName>
-            <password>pass1</password>
-        </receiver>
-        <transmitter>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </transmitter>
-    </Message>
-    <Message dateMessage="24/10/2024 11:22:30">
-        <infoMessage>Bien también. ¿Recibiste el archivo que te envié?</infoMessage>
-
-        <receiver>
-            <nickName>Maria</nickName>
+            <nickName>Salva</nickName>
             <password>4321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:31:30">
+        <infoMessage>Perfecto, tengo todo listo para la reunión.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
         </receiver>
         <transmitter>
-
+            <nickName>Pablo</nickName>
+            <password>pablo456</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:32:00">
+        <infoMessage>¡Buenos días! Confirmo mi asistencia.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Carmen</nickName>
+            <password>carmen987</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:32:30">
+        <infoMessage>Gracias, Alberto. También estaré allí.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Lucia</nickName>
+            <password>lucia321</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:33:00">
+        <infoMessage>¡Genial! Nos vemos en la sala de reuniones.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Diego</nickName>
+            <password>diego123</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:33:30">
+        <infoMessage>Gracias por avisar, Alberto. Estaré allí a tiempo.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
+            <nickName>Ana</nickName>
+            <password>ana789</password>
+        </transmitter>
+    </Message>
+    <Message dateMessage="26/10/2024 08:34:00">
+        <infoMessage>Nos vemos luego, Alberto. Tengo algunas preguntas para la reunión.</infoMessage>
+        <receiver>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
+        </receiver>
+        <transmitter>
             <nickName>Juan</nickName>
             <password>pass1</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 11:23:15">
-        <infoMessage>Sí, lo vi. Lo estoy revisando, te aviso si encuentro algo.</infoMessage>
+    <Message dateMessage="26/10/2024 08:34:30">
+        <infoMessage>¡Perfecto, Juan! Lo discutimos en la reunión. ¡Nos vemos a todos!</infoMessage>
         <receiver>
             <nickName>Juan</nickName>
             <password>pass1</password>
         </receiver>
         <transmitter>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
+            <nickName>Alberto</nickName>
+            <password>1234</password>
         </transmitter>
     </Message>
-    <Message dateMessage="24/10/2024 11:24:00">
-        <infoMessage>¡Genial! Gracias por tu ayuda.</infoMessage>
-        <receiver>
-            <nickName>Maria</nickName>
-            <password>pass2</password>
-        </receiver>
-        <transmitter>
-            <nickName>Juan</nickName>
-            <password>pass1</password>
 
-        </transmitter>
-    </Message>
 
 </MessageList>

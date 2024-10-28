@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e92a3f68-7a06-4b69-b9f0-18371a67c9c1" name="Changes" comment="principio" />
+    <list default="true" id="e92a3f68-7a06-4b69-b9f0-18371a67c9c1" name="Changes" comment="principio">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_User.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +25,15 @@
   }
 }]]></component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="principio">
+      <option name="closed" value="true" />
+      <created>1730105589614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730105589614</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
