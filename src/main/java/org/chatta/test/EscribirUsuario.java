@@ -7,7 +7,7 @@ import org.chatta.model.entity.User;
 public class EscribirUsuario {
     public static void main(String[] args) {
         User user = new User("salva", "12334");
-        boolean success = XML_User.writeXML(user, XML.USER_XML.getURL());
+        boolean success = XML_User.writeXML(user);
         if (success) {
             System.out.println("Mensaje escrito correctamente.");
         } else {

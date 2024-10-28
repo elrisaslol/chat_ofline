@@ -110,7 +110,7 @@ public class PantalladeElegir {
         for (User user : users) {
             int numeroDeMensajes = contarMensajes(user);
             Message ultimoMessage = UltimoMensaje(user);
-            if (Sesion.getSesion().getUser() != user) { // Verificar que el usuario en sesión no se muestre
+            if (!Sesion.getSesion().getUser().equals(user)) { // Verificar que el usuario en sesión no se muestre
                 if (ultimoMessage != null) {
                     // Agregar datos con el último mensaje encontrado
                     dataList.add(new DATA(

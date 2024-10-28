@@ -146,7 +146,7 @@ public class PantalladeInscripcion {
         User user;
         user = new User(nombreUsuario.getText(), contraseñaUsuario.getText());
         Sesion.getSesion().setUser(new User(nombreUsuario.getText(), contraseñaUsuario.getText()));
-        boolean almacenado = XML_User.writeXML(user, XML.USER_XML.getURL());
+        boolean almacenado = XML_User.writeXML(user);
         if (almacenado) {
             System.out.println(Sesion.getSesion().getUser().getNickName());
         }else {

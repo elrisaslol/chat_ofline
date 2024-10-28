@@ -1,5 +1,6 @@
 package org.chatta.model.connection;
 
+import org.chatta.controllers_and_view.XML;
 import org.chatta.model.entity.Message;
 import org.chatta.model.entity.MessageList;
 
@@ -13,10 +14,10 @@ import java.util.List;
 
 public class XML_Message {
 
-    public static boolean writeXML(Message message, String fileName) {
+    public static boolean writeXML(Message message) {
         boolean result = false;
         try {
-            File file = new File(fileName);
+            File file = new File(XML.MESSAGE_XML.getURL());
             List<Message> messages = new ArrayList<>();
 
             // Si el archivo ya existe, leer los mensajes existentes
