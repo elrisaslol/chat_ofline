@@ -184,6 +184,7 @@ public class PantalladeElegir {
 
     @FXML
     private void SwitchTopantalladeInicio() throws IOException {
+        Sesion.getExitSesion();
         App.setRoot(scenes.PANTALLADEINICIO);
     }
 

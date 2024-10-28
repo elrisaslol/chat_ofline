@@ -11,6 +11,13 @@ public class Sesion {
         return _sesionIniciada;
     }
 
+    public static Sesion getExitSesion(){
+        if (_sesionIniciada != null){
+            _sesionIniciada = null;
+        }
+        return _sesionIniciada;
+    }
+
     public User getUser(){
         return user;
     }
