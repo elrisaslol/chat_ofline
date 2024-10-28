@@ -90,7 +90,7 @@ public class PantalladeElegir {
     @FXML
     public void initialize() {
         //mostrar singleton
-        System.out.println(Sesion.getSesion().getUser());
+        System.out.println(Sesion.getSesion().getUser().getNickName());
 
 
         // Configurar las columnas
@@ -154,8 +154,38 @@ public class PantalladeElegir {
                 }
             });
             return row;
+
+        });*/
+        // Crear lista de datos
+        ObservableList<DATA> dataList = FXCollections.observableArrayList(
+                new DATA("Alberto", "Hola", "10:30 AM", 5),
+                new DATA("Maria", "Adiós", "11:00 AM", 3)
+
+        );
+
+        // Agregar los datos a la tabla
+        tableView.setItems(dataList);
+
+        // Añadir listener para detectar clics en filas
+        tableView.setRowFactory(tv -> {
+            TableRow<DATA> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 1) {
+                    DATA rowData = row.getItem();
+                    System.out.println("Nombre seleccionado: " + rowData.getNombre()); // Para pruebas
+                    try {
+                        // Cambiar a la pantalla de escribir
+                        SwitchTopantalladeEscribir(rowData.getNombre());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            return row;
+
         });
     }
+
 
     @FXML
     private void SwitchTopantalladeInicio() throws IOException {
@@ -170,6 +200,7 @@ public class PantalladeElegir {
         // Obtener el controlador de PantalladeEscribir
         PantalladeEscribir escribirController = (PantalladeEscribir) App.getCurrentController();
         escribirController.recibirNombre(nombre); // Llama al método para establecer el nombre
+        escribirController.cargarMensajesFiltrados();
     }
 
     public static Message UltimoMensaje(User user) {

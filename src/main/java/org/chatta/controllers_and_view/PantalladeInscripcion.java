@@ -23,7 +23,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class PantalladeInscripcion {
     public void initialize() {
         //mostrar singleton
-        System.out.println(Sesion.getSesion().getUser());
+        try {
+            System.out.println(Sesion.getSesion().getUser().getNickName());
+        }catch (Exception e){
+            System.out.println("null");
+        }
     }
     @FXML
     private PasswordField contraseñaUsuario;
