@@ -43,7 +43,7 @@
 
    <Polygon fill="DODGERBLUE" layoutX="320.0" layoutY="173.0" points="-58.66668701171875, -117.66666412353516, 63.33331298828125, -117.66666412353516, 0.0, -60.0" stroke="DODGERBLUE" strokeType="INSIDE" />
 
-   <Text layoutX="271.0" layoutY="134.0" onMouseClicked="#SwitchToPantalladeInscripcion" strokeType="OUTSIDE" strokeWidth="0.0" text="Sin Nombre" textAlignment="CENTER">
+   <Text layoutX="278.0" layoutY="134.0" onMouseClicked="#SwitchToPantalladeInscripcion" strokeType="OUTSIDE" strokeWidth="0.0" text="WASIPID" textAlignment="CENTER">
       <font>
          <Font name="Times New Roman" size="20.0" />
       </font>
@@ -64,7 +64,7 @@
       </cursor>
    </TextField>
 
-   <Text accessibleRole="BUTTON" layoutX="282.0" layoutY="337.0" onMouseClicked="#SwitchToPantalladeInscripcion" strokeType="OUTSIDE" strokeWidth="0.0" text="registrarse" textAlignment="CENTER">
+   <Text accessibleRole="BUTTON" layoutX="280.0" layoutY="349.0" onMouseClicked="#SwitchToPantalladeInscripcion" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse" textAlignment="CENTER">
       <font>
          <Font name="Times New Roman Bold Italic" size="17.0" />
       </font>
@@ -73,9 +73,10 @@
       </cursor>
    </Text>
 
-   <Avatar layoutX="286.0" layoutY="19.0" radius="36.0">
-      <Image url="@../assets/logotipo.jpeg" />
-   </Avatar>
-
-   <Button layoutX="293.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#InicioSesión" text="iniciar" textAlignment="CENTER" />
+   <Button layoutX="293.0" layoutY="288.0" mnemonicParsing="false" onMouseClicked="#InicioSesión" text="Iniciar" textAlignment="CENTER" />
+   <ImageView fitHeight="77.0" fitWidth="79.0" layoutX="281.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../assets/logotipo.jpeg" />
+      </image>
+   </ImageView>
 </Pane>

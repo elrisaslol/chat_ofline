@@ -7,9 +7,10 @@
     <list default="true" id="e92a3f68-7a06-4b69-b9f0-18371a67c9c1" name="Changes" comment="principio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XML_Messages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_Messages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeElegir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeEscribir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/escribir.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML_User.xml" beforeDir="false" afterPath="$PROJECT_DIR$/XML_User.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chatta/controllers_and_view/PantalladeInico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/elegir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/elegir.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/chatta/controllers_and_view/inicio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730107630280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="principio">
+      <option name="closed" value="true" />
+      <created>1730119130292</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730119130292</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

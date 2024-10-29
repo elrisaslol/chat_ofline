@@ -20,17 +20,17 @@
     <Button layoutX="296.0" layoutY="382.0" mnemonicParsing="false" onMouseClicked="#SwitchTopantalladeInicio" text="volver" textAlignment="CENTER" />
     <Ellipse fill="DODGERBLUE" layoutX="143.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
     <Ellipse fill="DODGERBLUE" layoutX="496.0" layoutY="100.0" radiusX="100.0" radiusY="80.0" stroke="DODGERBLUE" strokeType="INSIDE" />
-    <Text layoutX="257.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELEGIR" textAlignment="CENTER">
+    <Text layoutX="269.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELEGIR" textAlignment="CENTER">
         <font>
             <Font name="Times New Roman Bold" size="26.0" />
         </font>
     </Text>
     <TableView fx:id="tableView" layoutX="10.0" layoutY="165.0" prefHeight="200.0" prefWidth="623.0">
         <columns>
-            <TableColumn fx:id="nombreColumn"  prefWidth="190.66665649414062" text="NOMBRE" />
-            <TableColumn fx:id="ultimoMensajeColumn" editable="false" prefWidth="258.6666259765625" text="ULTIMO MENSAJE" />
-            <TableColumn fx:id="horaColumn" editable="false" prefWidth="63.3333740234375" text="HORA" />
-            <TableColumn fx:id="numeroMensajesColumn" editable="false" prefWidth="109.99993896484375" text="Nº de MENSAJES" />
+            <TableColumn fx:id="nombreColumn" prefWidth="190.66665649414062" text="NOMBRE" />
+            <TableColumn fx:id="ultimoMensajeColumn" editable="false" prefWidth="248.66668701171875" text="ULTIMO MENSAJE" />
+            <TableColumn fx:id="horaColumn" editable="false" prefWidth="64.0" text="HORA" />
+            <TableColumn fx:id="numeroMensajesColumn" editable="false" prefWidth="113.33331298828125" text="Nº de MENSAJES" />
         </columns>
    </TableView>
 </Pane>

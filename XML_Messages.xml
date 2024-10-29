@@ -397,4 +397,15 @@
             <password>1234</password>
         </transmitter>
     </Message>
+    <Message dateMessage="28/10/2024 13:40:54">
+        <infoMessage>Hola</infoMessage>
+        <receiver>
+            <nickName>Juan</nickName>
+            <password>pass1</password>
+        </receiver>
+        <transmitter>
+            <nickName>Pabloñ</nickName>
+            <password>Pa_blo</password>
+        </transmitter>
+    </Message>
 </MessageList>

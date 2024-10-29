@@ -40,4 +40,12 @@
         <nickName>Sara</nickName>
         <password>sara654</password>
     </User>
+    <User>
+        <nickName>Pabloñ</nickName>
+        <password>Pa_blo</password>
+    </User>
+    <User>
+        <nickName>1</nickName>
+        <password>1</password>
+    </User>
 </UserList>
