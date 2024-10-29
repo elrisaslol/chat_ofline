@@ -87,7 +87,7 @@ public class PantalladeInico {
                 String contraseña = usuario.getElementsByTagName("password").item(0).getTextContent();
 
                 // Comparar credenciales
-                if (usuarioIngresado.equalsIgnoreCase(nombre) && contraseñaIngresada.equals(contraseña)) {
+                if (usuarioIngresado.equals(nombre) && contraseñaIngresada.equals(contraseña)) {
                     return true;  // Credenciales válidas
                 }
             }
